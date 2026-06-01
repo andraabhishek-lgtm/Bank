@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact TrustStackly Bank — Phone, Email, Branch and Online Support">
+<title>Contact Us — TrustStackly Bank</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo"><img class="nav-logo-icon" src="images/logo.png" alt="TrustStackly"><div class="nav-logo-text"><span class="nav-logo-name">TrustStackly</span><span class="nav-logo-tagline">Secure Banking</span></div></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a>
+        <a href="digital-banking.html">Digital</a><a href="loans.html">Loans</a>
+        <a href="credit-cards.html">Cards</a><a href="support.html">Support</a><a href="contact.html" class="active">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="nav-theme-btn">☀️</button>
+        <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+        <a href="signup.html" class="btn btn-primary btn-sm">Open Account</a>
+        <button class="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <div class="mobile-nav-links">
+    <a href="index.html">🏠 Home</a><a href="about.html">🏛️ About Us</a><a href="services.html">💼 Services</a>
+    <a href="digital-banking.html">📱 Digital</a><a href="loans.html">💰 Loans</a>
+    <a href="credit-cards.html">💳 Cards</a><a href="support.html">🎧 Support</a><a href="contact.html">📞 Contact</a>
+  </div>
+  <div class="mobile-actions"><a href="login.html" class="btn btn-outline w-full">Login</a><a href="signup.html" class="btn btn-primary w-full">Open Account</a></div>
+</div>
+<div class="menu-overlay"></div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Contact</span></div>
+    <span class="section-tag">Get in Touch</span>
+    <h1 class="page-header-title">Contact <span class="text-gold">TrustStackly</span></h1>
+    <p class="page-header-subtitle">We're here to help. Reach our team via phone, email or visit your nearest branch.</p>
+  </div>
+</div>
+
+<section style="background:#060c18">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div>
+        <span class="section-tag reveal">Contact Information</span>
+        <h2 class="section-title reveal">We're Always <span>Available</span></h2>
+        <p style="color:rgba(255,255,255,.58);font-size:.9rem;line-height:1.75;margin-bottom:8px" class="reveal">Whether you have a banking query, need technical support or want to speak with a relationship manager — our team is ready to assist you.</p>
+
+        <div class="contact-info-items">
+          <div class="contact-info-item reveal">
+            <div class="contact-info-icon">📞</div>
+            <div class="contact-info-text">
+              <h4>Toll-Free Number</h4>
+              <p>1800-123-4567 (Free for all networks)<br>Available Mon–Sat: 8AM–10PM</p>
+            </div>
+          </div>
+          <div class="contact-info-item reveal reveal-d1">
+            <div class="contact-info-icon">📧</div>
+            <div class="contact-info-text">
+              <h4>Email Support</h4>
+              <p>support@truststackly.bank<br>Response guaranteed within 2 hours</p>
+            </div>
+          </div>
+          <div class="contact-info-item reveal reveal-d2">
+            <div class="contact-info-icon">💬</div>
+            <div class="contact-info-text">
+              <h4>Live Chat</h4>
+              <p>Chat with us 24/7 via mobile app or website.<br>Average response time: under 2 minutes</p>
+            </div>
+          </div>
+          <div class="contact-info-item reveal reveal-d3">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text">
+              <h4>Corporate Headquarters</h4>
+              <p>TrustStackly Tower, BKC, Bandra East<br>Mumbai, Maharashtra 400051</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-placeholder reveal">
+          <span class="map-icon">📍</span>
+          <p>TrustStackly HQ — BKC, Mumbai</p>
+          <button class="btn btn-outline btn-sm" style="font-size:.75rem" onclick="showToast('Opening map...','info')">Open in Maps</button>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="reveal">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:38px">
+          <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:6px">Send Us a Message</h3>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.48);margin-bottom:26px">Fill in the form and our team will get back to you within 2 hours.</p>
+          <form id="contact-form" style="display:flex;flex-direction:column;gap:16px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+              <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input class="form-control" type="text" placeholder="Your first name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input class="form-control" type="text" placeholder="Your last name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input class="form-control" type="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mobile Number</label>
+              <input class="form-control" type="tel" placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <select class="form-control" required>
+                <option value="" disabled selected>Select topic</option>
+                <option>Account Opening</option>
+                <option>Loan Enquiry</option>
+                <option>Credit Card</option>
+                <option>Internet Banking</option>
+                <option>Transaction Issue</option>
+                <option>Fraud / Dispute</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="4" placeholder="Describe your query in detail..." required style="resize:vertical"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="justify-content:center">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Branch Locator -->
+<section style="background:var(--navy)">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-tag">Branches</span>
+      <h2 class="section-title">Find a Branch <span>Near You</span></h2>
+      <p class="section-subtitle">250+ branches across India. Enter your city or PIN code to find the nearest TrustStackly branch.</p>
+    </div>
+    <div style="max-width:500px;margin:0 auto 36px;display:flex;gap:10px" class="reveal">
+      <input class="form-control" type="text" placeholder="Enter city, state or PIN code..." style="flex:1">
+      <button class="btn btn-primary" onclick="showToast('Searching branches...','info')">Search →</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" class="reveal">
+      <div class="why-card"><h4 class="why-title" style="font-size:1rem">Mumbai</h4><p class="why-desc">45 branches including BKC, Fort, Andheri, Bandra, Worli and Thane</p></div>
+      <div class="why-card"><h4 class="why-title" style="font-size:1rem">Bangalore</h4><p class="why-desc">38 branches including MG Road, Whitefield, Koramangala, Indiranagar</p></div>
+      <div class="why-card"><h4 class="why-title" style="font-size:1rem">Delhi NCR</h4><p class="why-desc">32 branches across Connaught Place, Gurgaon, Noida and South Delhi</p></div>
+      <div class="why-card"><h4 class="why-title" style="font-size:1rem">Hyderabad</h4><p class="why-desc">28 branches in Hitech City, Begumpet, Jubilee Hills and Secunderabad</p></div>
+      <div class="why-card"><h4 class="why-title" style="font-size:1rem">Chennai</h4><p class="why-desc">24 branches in Anna Nagar, T Nagar, Adyar and OMR</p></div>
+      <div class="why-card"><h4 class="why-title" style="font-size:1rem">Pune</h4><p class="why-desc">20 branches in Koregaon Park, Hinjewadi, Kothrud and Hadapsar</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="footer-logo-wrap"><img class="footer-logo-icon" src="images/logo.png" alt="TrustStackly"><div><div class="footer-logo-name">TrustStackly Bank</div><div class="footer-tagline-text">Secure Banking. Smarter Future.</div></div></a><p class="footer-desc">India's trusted digital banking platform.</p><div class="footer-social"><a class="social-icon" href="404.html">f</a><a class="social-icon" href="404.html">𝕏</a><a class="social-icon" href="404.html">📸</a><a class="social-icon" href="404.html">in</a></div></div>
+      <div class="footer-col"><h4>Quick Links</h4><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="loans.html">Loans</a></div></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-links"><a href="support.html">Help Centre</a><a href="faq.html">FAQ</a><a href="contact.html">Contact Us</a></div></div>
+      <div class="footer-col"><h4>Reach Us</h4><div class="footer-contact-item"><span class="footer-contact-icon">📞</span><div class="footer-contact-text">1800-123-4567</div></div><div class="footer-contact-item"><span class="footer-contact-icon">📧</span><div class="footer-contact-text">support@truststackly.bank</div></div></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-copy">© 2026 TrustStackly Bank Ltd. | Andra Abhishek (STK-26-2026)</div><div class="footer-legal"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<button class="back-to-top">↑</button>
+<script src="js/main.js"></script>
+</body>
+</html>
+
