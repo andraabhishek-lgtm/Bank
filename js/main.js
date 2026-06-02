@@ -59,20 +59,16 @@ function initMobileMenu() {
 
 /* ===== THEME ===== */
 function initTheme() {
-  const saved = localStorage.getItem('tsb-theme') || 'light';
-  applyTheme(saved);
+  applyTheme('dark');
   const btn = document.querySelector('.nav-theme-btn');
   if (!btn) return;
-  btn.addEventListener('click', () => {
-    const cur = document.documentElement.getAttribute('data-theme');
-    applyTheme(cur === 'dark' ? 'light' : 'dark');
-  });
+  btn.setAttribute('aria-label', 'Dark mode locked');
 }
 function applyTheme(t) {
-  document.documentElement.setAttribute('data-theme', t);
-  localStorage.setItem('tsb-theme', t);
+  document.documentElement.setAttribute('data-theme', 'dark');
+  localStorage.setItem('tsb-theme', 'dark');
   const btn = document.querySelector('.nav-theme-btn');
-  if (btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+  if (btn) btn.textContent = '☀️';
 }
 
 /* ===== ACTIVE NAV LINK ===== */
