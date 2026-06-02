@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +7,15 @@
 <title>Dashboard — TrustStackly Bank</title>
 <link rel="stylesheet" href="css/styles.css">
 <style>
-.loan-progress{background:rgba(255,255,255,.08);border-radius:4px;height:6px;margin-top:8px;overflow:hidden}
-.loan-progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:4px}
-.notif-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.loan-progress{background:rgba(11,107,206,.12);border-radius:4px;height:6px;margin-top:8px;overflow:hidden}
+.loan-progress-fill{height:100%;background:linear-gradient(90deg,#0B6BCE,#16A34A);border-radius:4px}
+.notif-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(11,107,206,.08)}
 .notif-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:4px}
 .notif-dot.green{background:var(--success)}
-.notif-dot.gold{background:var(--gold)}
+.notif-dot.gold{background:#0B6BCE}
 .notif-dot.blue{background:var(--blue)}
-.notif-text{font-size:.8rem;color:rgba(255,255,255,.65);line-height:1.5}
-.notif-time{font-size:.68rem;color:rgba(255,255,255,.3);margin-top:2px}
+.notif-text{font-size:.8rem;color:#475569;line-height:1.5}
+.notif-time{font-size:.68rem;color:#94A3B8;margin-top:2px}
 </style>
 </head>
 <body class="dashboard-page">
@@ -24,7 +24,7 @@
   <!-- SIDEBAR -->
   <aside class="dashboard-sidebar">
     <a href="index.html" class="sidebar-logo">
-      <img class="sidebar-logo-icon" src="images/logo.png" alt="TrustStackly">
+      <img class="sidebar-logo-icon" src="images/logo.webp" alt="TrustStackly">
       <span class="sidebar-logo-name">TrustStackly</span>
     </a>
 
@@ -82,7 +82,7 @@
     <!-- Top Bar -->
     <div class="dashboard-topbar">
       <div class="dashboard-greeting">
-        <h2>Good Morning, Abhishek! 👋</h2>
+        <h2 id="dashboard-greeting-h2">Good Morning! 👋</h2>
         <p>Sunday, June 1, 2026 | Last login: Today, 9:42 AM from Mumbai</p>
       </div>
       <div class="dashboard-topbar-actions">
@@ -226,15 +226,15 @@
         </div>
         <div style="display:flex;gap:16px;margin-top:14px;flex-wrap:wrap">
           <div style="flex:1;min-width:120px">
-            <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-bottom:3px">Total Spent</div>
+            <div style="font-size:.72rem;color:#64748B);margin-bottom:3px">Total Spent</div>
             <div style="font-size:1.1rem;font-weight:700;color:var(--danger)">₹42,380</div>
           </div>
           <div style="flex:1;min-width:120px">
-            <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-bottom:3px">Total Received</div>
+            <div style="font-size:.72rem;color:#64748B);margin-bottom:3px">Total Received</div>
             <div style="font-size:1.1rem;font-weight:700;color:var(--success)">₹72,000</div>
           </div>
           <div style="flex:1;min-width:120px">
-            <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-bottom:3px">Net Savings</div>
+            <div style="font-size:.72rem;color:#64748B);margin-bottom:3px">Net Savings</div>
             <div style="font-size:1.1rem;font-weight:700;color:var(--gold-light)">₹29,620</div>
           </div>
         </div>
@@ -253,22 +253,22 @@
           <div class="card-chip" style="width:32px;height:24px"></div>
           <div class="card-number" style="font-size:.82rem">•••• •••• •••• 8842</div>
           <div class="card-bottom" style="font-size:.72rem">
-            <span class="card-holder">ABHISHEK ANDRA</span>
+            <span class="card-holder" id="card-holder-name">CARDHOLDER</span>
             <span class="card-network" style="font-size:1rem">VISA</span>
           </div>
           <div class="card-shine"></div>
         </div>
         <div style="display:flex;justify-content:space-between;margin-bottom:8px">
-          <span style="font-size:.78rem;color:rgba(255,255,255,.5)">Credit Used</span>
+          <span style="font-size:.78rem;color:#475569)">Credit Used</span>
           <span style="font-size:.78rem;font-weight:600">₹42,300 / ₹3,00,000</span>
         </div>
-        <div style="background:rgba(255,255,255,.08);border-radius:4px;height:6px;overflow:hidden;margin-bottom:12px">
+        <div style="background:rgba(11,107,206,.1);border-radius:4px;height:6px;overflow:hidden;margin-bottom:12px">
           <div style="height:100%;width:14%;background:linear-gradient(90deg,var(--success),var(--blue));border-radius:4px"></div>
         </div>
         <div style="display:flex;justify-content:space-between">
-          <div><div style="font-size:.7rem;color:rgba(255,255,255,.4)">Available Limit</div><div style="font-size:1rem;font-weight:700;color:var(--success)">₹2,57,700</div></div>
-          <div style="text-align:right"><div style="font-size:.7rem;color:rgba(255,255,255,.4)">Min. Due</div><div style="font-size:1rem;font-weight:700;color:var(--warning)">₹2,115</div></div>
-          <div style="text-align:right"><div style="font-size:.7rem;color:rgba(255,255,255,.4)">Due Date</div><div style="font-size:1rem;font-weight:700">Jun 15</div></div>
+          <div><div style="font-size:.7rem;color:#64748B)">Available Limit</div><div style="font-size:1rem;font-weight:700;color:var(--success)">₹2,57,700</div></div>
+          <div style="text-align:right"><div style="font-size:.7rem;color:#64748B)">Min. Due</div><div style="font-size:1rem;font-weight:700;color:var(--warning)">₹2,115</div></div>
+          <div style="text-align:right"><div style="font-size:.7rem;color:#64748B)">Due Date</div><div style="font-size:1rem;font-weight:700">Jun 15</div></div>
         </div>
       </div>
 
@@ -313,7 +313,7 @@
             <span style="font-size:.85rem;font-weight:600">Home Loan</span>
             <span style="font-size:.8rem;color:var(--gold-light)">60% Repaid</span>
           </div>
-          <div style="font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:6px">Outstanding: ₹18,00,000 | EMI: ₹14,500/month</div>
+          <div style="font-size:.75rem;color:#64748B);margin-bottom:6px">Outstanding: ₹18,00,000 | EMI: ₹14,500/month</div>
           <div class="loan-progress"><div class="loan-progress-fill" style="width:60%"></div></div>
         </div>
         <div>
@@ -321,13 +321,13 @@
             <span style="font-size:.85rem;font-weight:600">Personal Loan</span>
             <span style="font-size:.8rem;color:var(--gold-light)">35% Repaid</span>
           </div>
-          <div style="font-size:.75rem;color:rgba(255,255,255,.45);margin-bottom:6px">Outstanding: ₹3,25,000 | EMI: ₹9,800/month</div>
+          <div style="font-size:.75rem;color:#64748B);margin-bottom:6px">Outstanding: ₹3,25,000 | EMI: ₹9,800/month</div>
           <div class="loan-progress"><div class="loan-progress-fill" style="width:35%"></div></div>
         </div>
       </div>
     </div>
 
-    <div style="text-align:center;padding:16px;color:rgba(255,255,255,.28);font-size:.75rem">
+    <div style="text-align:center;padding:16px;color:#94A3B8);font-size:.75rem">
       © 2026 TrustStackly Bank Ltd. | Secured Session | Last Updated: June 1, 2026
     </div>
   </main>
@@ -336,32 +336,79 @@
 <script src="js/main.js"></script>
 <script>
 (function(){
-  /* Populate email pill from localStorage */
-  const stored = localStorage.getItem('tsb-user-email');
-  const email = (stored && stored.trim()) ? stored.trim() : null;
+  /* ── Read stored user data ─────────────────────────────── */
+  const storedEmail = (localStorage.getItem('tsb-user-email') || '').trim();
+  const storedName  = (localStorage.getItem('tsb-user-name')  || '').trim();
 
-  const emailEl  = document.getElementById('topbar-email-text');
-  const pillEl   = document.getElementById('topbar-email-pill');
+  /* ── Derive a display name ─────────────────────────────── */
+  function toTitleCase(str) {
+    return str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+  }
+
+  let displayName = '';
+  let firstName   = '';
+
+  if (storedName) {
+    /* Name was saved during signup → use it directly */
+    displayName = toTitleCase(storedName);
+    firstName   = displayName.split(' ')[0];
+  } else if (storedEmail) {
+    /* Fallback: derive from the email prefix */
+    const prefix = storedEmail.split('@')[0].replace(/[._\-]/g, ' ');
+    displayName  = toTitleCase(prefix).toUpperCase();
+    firstName    = toTitleCase(prefix.split(/\s+/)[0]);
+  }
+
+  /* ── Greeting h2 ───────────────────────────────────────── */
+  const greetingEl = document.getElementById('dashboard-greeting-h2');
+  if (greetingEl) {
+    const hour = new Date().getHours();
+    const tod  = hour < 12 ? 'Morning' : hour < 17 ? 'Afternoon' : 'Evening';
+    greetingEl.textContent = firstName
+      ? `Good ${tod}, ${firstName}! 👋`
+      : `Good ${tod}! 👋`;
+  }
+
+  /* ── Credit card holder name ───────────────────────────── */
+  const cardHolderEl = document.getElementById('card-holder-name');
+  if (cardHolderEl && displayName) {
+    cardHolderEl.textContent = displayName;
+  }
+
+  /* ── Email pill ────────────────────────────────────────── */
+  const emailEl = document.getElementById('topbar-email-text');
+  const pillEl  = document.getElementById('topbar-email-pill');
+  if (storedEmail) {
+    if (emailEl) emailEl.textContent = storedEmail;
+    if (pillEl)  pillEl.title = 'Logged in as: ' + storedEmail;
+  }
+
+  /* ── Avatar initials ───────────────────────────────────── */
   const avatarEl = document.getElementById('topbar-avatar');
-
-  if (email) {
-    if (emailEl)  emailEl.textContent  = email;
-    if (pillEl)   pillEl.title         = 'Logged in as: ' + email;
-    if (avatarEl) {
-      const parts    = email.replace(/[@._]/g,' ').split(/\s+/).filter(Boolean);
+  if (avatarEl) {
+    if (displayName) {
+      const parts    = displayName.split(/\s+/).filter(Boolean);
+      const initials = ((parts[0]||'T')[0] + (parts[1]||'S')[0]).toUpperCase();
+      avatarEl.textContent = initials;
+    } else if (storedEmail) {
+      const parts    = storedEmail.replace(/[@._]/g,' ').split(/\s+/).filter(Boolean);
       const initials = ((parts[0]||'T')[0] + (parts[1]||'S')[0]).toUpperCase();
       avatarEl.textContent = initials;
     }
   }
 
-  /* Wire up logout link to clear stored email */
+  /* ── Logout: clear all user data ──────────────────────── */
   document.querySelectorAll('a[href="index.html"]').forEach(a => {
     if (a.textContent.trim().includes('Logout')) {
-      a.addEventListener('click', () => localStorage.removeItem('tsb-user-email'));
+      a.addEventListener('click', () => {
+        localStorage.removeItem('tsb-user-email');
+        localStorage.removeItem('tsb-user-name');
+      });
     }
   });
 })();
 </script>
 </body>
 </html>
+
 

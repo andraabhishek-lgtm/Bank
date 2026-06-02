@@ -1,6 +1,6 @@
-/* ============================================================
+﻿/* ============================================================
    TrustStackly Bank — Main JavaScript
-   Prepared by: Andra Abhishek | ID: STK-26-2026
+   Prepared by: Andra Abhishek | ID: STK-26-1248
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -59,7 +59,7 @@ function initMobileMenu() {
 
 /* ===== THEME ===== */
 function initTheme() {
-  const saved = localStorage.getItem('tsb-theme') || 'dark';
+  const saved = localStorage.getItem('tsb-theme') || 'light';
   applyTheme(saved);
   const btn = document.querySelector('.nav-theme-btn');
   if (!btn) return;
@@ -277,6 +277,8 @@ function initAuthForms() {
       if (pw !== cpw) { showToast('Passwords do not match', 'error'); return; }
       const signupEmail = (document.querySelector('#email')?.value || '').trim();
       if (signupEmail) localStorage.setItem('tsb-user-email', signupEmail.toUpperCase());
+      const signupName = (document.querySelector('#full-name')?.value || '').trim();
+      if (signupName) localStorage.setItem('tsb-user-name', signupName.toUpperCase());
       const btn = signupForm.querySelector('[type="submit"]');
       btn.textContent = 'Creating Account...';
       btn.disabled = true;

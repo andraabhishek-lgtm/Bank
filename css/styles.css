@@ -1,6 +1,6 @@
-/* ============================================================
+﻿/* ============================================================
    TrustStackly Bank — Main Stylesheet
-   Prepared by: Andra Abhishek | ID: STK-26-2026
+   Prepared by: Andra Abhishek | ID: STK-26-1248
    ============================================================ */
 
 :root {
@@ -985,8 +985,9 @@ input[type="range"]::-webkit-slider-thumb{
   box-shadow:0 18px 50px rgba(0,0,0,.3)
 }
 .digital-feature-card .feature-num{
-  font-size:4rem;font-weight:900;color:rgba(201,162,39,.08);
-  position:absolute;top:10px;right:16px;line-height:1
+  font-size:4rem;font-weight:900;color:rgba(201,162,39,.42);
+  position:absolute;top:10px;right:16px;line-height:1;
+  text-shadow:0 2px 8px rgba(201,162,39,.18)
 }
 .digital-feature-icon{
   width:52px;height:52px;background:rgba(201,162,39,.14);border-radius:13px;
@@ -1319,3 +1320,1766 @@ input[type="range"]::-webkit-slider-thumb{
 [data-theme="light"] .dashboard-sidebar{background:rgba(255,255,255,.9);color:#0a1628}
 [data-theme="light"] .auth-page{background:linear-gradient(135deg,#d8dfe9,#eef2f8)}
 [data-theme="light"] .page-404{background:linear-gradient(135deg,#d8dfe9,#eef2f8)}
+
+/* ============================================================
+   NEUMORPHISM + CLAYMORPHISM VISUAL LAYER
+   TrustStackly Bank — Depth Enhancement
+   Only changes: box-shadow · background · border-radius · border · backdrop-filter
+   Does NOT change: layout · structure · spacing · sizes · content
+   ============================================================ */
+
+/* ---- Depth tokens ---- */
+:root{
+  --neu-raise: -5px -5px 12px rgba(255,255,255,.04), 5px 5px 14px rgba(0,0,0,.52);
+  --neu-press: inset 3px 3px 8px rgba(0,0,0,.55), inset -2px -2px 6px rgba(255,255,255,.03);
+  --clay-top:  inset 0 1px 0 rgba(255,255,255,.09);
+  --clay-glow: 0 0 26px rgba(201,162,39,.1);
+  --clay-lift: 0 16px 48px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+/* ============================================================
+   NAVBAR / HEADER
+   ============================================================ */
+.navbar.scrolled{
+  background:rgba(5,11,22,.97);
+  backdrop-filter:blur(28px);
+  -webkit-backdrop-filter:blur(28px);
+  box-shadow:0 4px 36px rgba(0,0,0,.6), inset 0 -1px 0 rgba(255,255,255,.04), inset 0 1px 0 rgba(255,255,255,.02);
+  border-bottom:1px solid rgba(255,255,255,.07)
+}
+.nav-logo-icon{
+  box-shadow:-3px -3px 7px rgba(255,255,255,.06), 3px 3px 8px rgba(0,0,0,.55), 0 0 12px rgba(201,162,39,.12);
+  border-radius:12px
+}
+
+/* ============================================================
+   AUTH CARDS — LOGIN / SIGNUP
+   ============================================================ */
+.auth-card{
+  background:linear-gradient(145deg,rgba(11,22,42,.92),rgba(6,13,26,.96));
+  backdrop-filter:blur(32px);
+  -webkit-backdrop-filter:blur(32px);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:32px;
+  box-shadow:
+    0 32px 80px rgba(0,0,0,.62),
+    inset 0 1px 0 rgba(255,255,255,.09),
+    inset 0 -1px 0 rgba(0,0,0,.32),
+    -8px -8px 20px rgba(255,255,255,.03),
+    8px 8px 22px rgba(0,0,0,.52)
+}
+.auth-page{
+  background:linear-gradient(135deg,#030810,#060f1c,#091525)
+}
+
+/* ============================================================
+   INPUT FIELDS — Neumorphic inset
+   ============================================================ */
+.form-control{
+  background:rgba(3,8,16,.65);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:13px;
+  box-shadow:inset 3px 3px 9px rgba(0,0,0,.58), inset -2px -2px 5px rgba(255,255,255,.025)
+}
+.form-control:focus{
+  background:rgba(4,10,20,.72);
+  border-color:rgba(201,162,39,.42);
+  box-shadow:
+    inset 3px 3px 9px rgba(0,0,0,.52),
+    inset -2px -2px 5px rgba(255,255,255,.025),
+    0 0 0 3px rgba(201,162,39,.14),
+    0 0 22px rgba(201,162,39,.13)
+}
+
+/* ============================================================
+   BUTTONS — Clay lift + Neumorph press
+   ============================================================ */
+.btn-primary{
+  box-shadow:
+    0 6px 22px rgba(201,162,39,.48),
+    inset 0 1px 0 rgba(255,255,255,.28),
+    inset 0 -2px 0 rgba(0,0,0,.22)
+}
+.btn-primary:hover{
+  box-shadow:
+    0 10px 34px rgba(201,162,39,.62),
+    inset 0 1px 0 rgba(255,255,255,.32),
+    inset 0 -2px 0 rgba(0,0,0,.18)
+}
+.btn-primary:active{
+  transform:translateY(1px);
+  box-shadow:
+    0 3px 12px rgba(201,162,39,.32),
+    inset 0 3px 7px rgba(0,0,0,.28)
+}
+.btn-outline{
+  box-shadow:
+    -4px -4px 10px rgba(255,255,255,.04),
+    4px 4px 10px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.07)
+}
+.btn-outline:hover{
+  box-shadow:
+    -5px -5px 13px rgba(255,255,255,.05),
+    5px 5px 14px rgba(0,0,0,.52),
+    inset 0 1px 0 rgba(255,255,255,.1)
+}
+.btn-outline-gold{
+  box-shadow:0 4px 18px rgba(201,162,39,.22), inset 0 1px 0 rgba(255,255,255,.07)
+}
+.btn-outline-gold:hover{
+  box-shadow:0 8px 28px rgba(201,162,39,.42), inset 0 1px 0 rgba(255,255,255,.12)
+}
+
+/* ============================================================
+   GLASS CARDS — Claymorphism elevation
+   ============================================================ */
+.glass-card{
+  background:linear-gradient(145deg,rgba(14,28,52,.72),rgba(7,16,32,.88));
+  backdrop-filter:blur(26px);
+  -webkit-backdrop-filter:blur(26px);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:24px;
+  box-shadow:
+    0 12px 42px rgba(0,0,0,.46),
+    inset 0 1px 0 rgba(255,255,255,.08),
+    -5px -5px 12px rgba(255,255,255,.03),
+    5px 5px 15px rgba(0,0,0,.52)
+}
+.glass-card:hover{
+  box-shadow:
+    0 22px 60px rgba(0,0,0,.56),
+    inset 0 1px 0 rgba(255,255,255,.11),
+    -6px -6px 16px rgba(255,255,255,.04),
+    6px 6px 18px rgba(0,0,0,.56),
+    0 0 32px rgba(201,162,39,.1)
+}
+
+/* ============================================================
+   SERVICE CARDS
+   ============================================================ */
+.service-card{
+  background:linear-gradient(145deg,rgba(11,22,42,.82),rgba(6,14,28,.92));
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:22px;
+  box-shadow:
+    0 8px 28px rgba(0,0,0,.42),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    -4px -4px 10px rgba(255,255,255,.025),
+    4px 4px 11px rgba(0,0,0,.48)
+}
+.service-card:hover{
+  box-shadow:
+    0 18px 52px rgba(0,0,0,.54),
+    inset 0 1px 0 rgba(255,255,255,.1),
+    0 0 26px rgba(201,162,39,.12),
+    -5px -5px 13px rgba(255,255,255,.03),
+    5px 5px 14px rgba(0,0,0,.54)
+}
+.service-icon-wrap{
+  border-radius:15px;
+  box-shadow:-2px -2px 6px rgba(255,255,255,.04), 2px 2px 7px rgba(0,0,0,.44)
+}
+
+/* ============================================================
+   LOAN CARDS
+   ============================================================ */
+.loan-card{
+  background:linear-gradient(145deg,rgba(13,26,48,.86),rgba(7,16,30,.94));
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:24px;
+  box-shadow:
+    0 10px 36px rgba(0,0,0,.46),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    -5px -5px 12px rgba(255,255,255,.025),
+    5px 5px 14px rgba(0,0,0,.5)
+}
+.loan-card:hover{
+  box-shadow:
+    0 20px 54px rgba(0,0,0,.56),
+    inset 0 1px 0 rgba(255,255,255,.1),
+    0 0 30px rgba(201,162,39,.16)
+}
+
+/* ============================================================
+   WHY CHOOSE US CARDS
+   ============================================================ */
+.why-card{
+  background:linear-gradient(145deg,rgba(10,20,38,.76),rgba(6,13,26,.92));
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:18px;
+  box-shadow:
+    0 6px 22px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,255,255,.06),
+    -4px -4px 10px rgba(255,255,255,.022),
+    4px 4px 10px rgba(0,0,0,.44)
+}
+.why-card:hover{
+  box-shadow:
+    0 14px 42px rgba(0,0,0,.52),
+    inset 0 1px 0 rgba(255,255,255,.09),
+    0 0 22px rgba(201,162,39,.1)
+}
+
+/* ============================================================
+   NEWS CARDS
+   ============================================================ */
+.news-card{
+  background:linear-gradient(145deg,rgba(11,22,42,.82),rgba(6,14,28,.9));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:22px;
+  box-shadow:
+    0 8px 28px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    -3px -3px 8px rgba(255,255,255,.022),
+    3px 3px 9px rgba(0,0,0,.44)
+}
+.news-card:hover{
+  box-shadow:
+    0 16px 46px rgba(0,0,0,.52),
+    inset 0 1px 0 rgba(255,255,255,.09),
+    0 0 24px rgba(201,162,39,.1)
+}
+
+/* ============================================================
+   TESTIMONIAL CARDS
+   ============================================================ */
+.testimonial-card{
+  background:linear-gradient(145deg,rgba(11,22,42,.76),rgba(6,14,28,.9));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:22px;
+  box-shadow:
+    0 8px 28px rgba(0,0,0,.4),
+    inset 0 1px 0 rgba(255,255,255,.06),
+    -3px -3px 8px rgba(255,255,255,.02),
+    3px 3px 9px rgba(0,0,0,.44)
+}
+
+/* ============================================================
+   SECURITY FEATURES
+   ============================================================ */
+.security-feature{
+  background:linear-gradient(145deg,rgba(11,22,42,.82),rgba(6,14,28,.9));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  box-shadow:
+    0 6px 22px rgba(0,0,0,.36),
+    inset 0 1px 0 rgba(255,255,255,.06),
+    -3px -3px 8px rgba(255,255,255,.02),
+    3px 3px 9px rgba(0,0,0,.42)
+}
+.security-feature:hover{
+  box-shadow:
+    0 12px 36px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.09),
+    0 0 20px rgba(201,162,39,.1)
+}
+.security-badge-main{
+  background:linear-gradient(145deg,rgba(10,20,38,.88),rgba(6,13,26,.96));
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:30px;
+  box-shadow:
+    0 14px 44px rgba(0,0,0,.48),
+    inset 0 1px 0 rgba(255,255,255,.08),
+    -6px -6px 14px rgba(255,255,255,.03),
+    6px 6px 17px rgba(0,0,0,.52)
+}
+.security-feature-icon{
+  border-radius:14px;
+  box-shadow:-2px -2px 6px rgba(255,255,255,.03), 2px 2px 7px rgba(0,0,0,.4)
+}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-item{
+  background:linear-gradient(145deg,rgba(10,20,38,.76),rgba(6,13,26,.9));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  box-shadow:
+    0 4px 18px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.05),
+    -3px -3px 7px rgba(255,255,255,.02),
+    3px 3px 8px rgba(0,0,0,.4)
+}
+.faq-item.open{
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.44),
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 0 22px rgba(201,162,39,.1)
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{
+  background:linear-gradient(180deg,#020710,#030912);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05)
+}
+
+/* ============================================================
+   DASHBOARD — SIDEBAR
+   ============================================================ */
+.dashboard-sidebar{
+  background:linear-gradient(180deg,rgba(4,9,19,.99),rgba(6,13,25,.99));
+  border-right:1px solid rgba(255,255,255,.05);
+  box-shadow:6px 0 44px rgba(0,0,0,.62), inset -1px 0 0 rgba(255,255,255,.04)
+}
+.sidebar-nav-item{
+  border-radius:13px
+}
+.sidebar-nav-item:hover{
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06), 0 4px 14px rgba(0,0,0,.32)
+}
+.sidebar-nav-item.active{
+  box-shadow:
+    0 4px 18px rgba(201,162,39,.22),
+    inset 0 1px 0 rgba(255,255,255,.1),
+    -3px -3px 8px rgba(255,255,255,.03),
+    3px 3px 9px rgba(0,0,0,.42)
+}
+
+/* ============================================================
+   DASHBOARD — BALANCE CARDS
+   ============================================================ */
+.balance-card{
+  background:linear-gradient(145deg,rgba(12,25,48,.92),rgba(7,15,32,.96));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  box-shadow:
+    0 8px 28px rgba(0,0,0,.46),
+    inset 0 1px 0 rgba(255,255,255,.08),
+    -5px -5px 12px rgba(255,255,255,.025),
+    5px 5px 14px rgba(0,0,0,.52)
+}
+.balance-card:hover{
+  box-shadow:
+    0 14px 42px rgba(0,0,0,.56),
+    inset 0 1px 0 rgba(255,255,255,.1),
+    0 0 26px rgba(201,162,39,.13)
+}
+.balance-card-icon{
+  border-radius:12px;
+  box-shadow:inset -1px -1px 4px rgba(255,255,255,.04), inset 1px 1px 5px rgba(0,0,0,.38)
+}
+
+/* ============================================================
+   DASHBOARD — PANELS
+   ============================================================ */
+.dashboard-panel{
+  background:linear-gradient(145deg,rgba(10,20,38,.88),rgba(6,13,26,.96));
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:20px;
+  box-shadow:
+    0 8px 30px rgba(0,0,0,.44),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    -4px -4px 10px rgba(255,255,255,.022),
+    4px 4px 12px rgba(0,0,0,.48)
+}
+
+/* ============================================================
+   DASHBOARD — TRANSACTIONS
+   ============================================================ */
+.trans-icon{
+  background:linear-gradient(145deg,rgba(14,28,52,.9),rgba(7,16,32,.96));
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:12px;
+  box-shadow:-2px -2px 6px rgba(255,255,255,.03), 2px 2px 7px rgba(0,0,0,.46)
+}
+
+/* ============================================================
+   DASHBOARD — QUICK ACTIONS
+   ============================================================ */
+.quick-action-btn{
+  background:linear-gradient(145deg,rgba(12,24,46,.86),rgba(7,15,30,.96));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:15px;
+  box-shadow:
+    0 4px 15px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    -3px -3px 8px rgba(255,255,255,.022),
+    3px 3px 9px rgba(0,0,0,.44)
+}
+.quick-action-btn:hover{
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.48),
+    inset 0 1px 0 rgba(255,255,255,.1),
+    0 0 18px rgba(201,162,39,.13)
+}
+.quick-action-btn:active{
+  transform:scale(.97);
+  box-shadow:inset 2px 2px 7px rgba(0,0,0,.44), inset -1px -1px 4px rgba(255,255,255,.03)
+}
+
+/* ============================================================
+   DASHBOARD — TOPBAR
+   ============================================================ */
+.topbar-btn{
+  background:rgba(8,16,30,.72);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:11px;
+  box-shadow:-2px -2px 6px rgba(255,255,255,.03), 2px 2px 6px rgba(0,0,0,.46)
+}
+.topbar-btn:hover{
+  box-shadow:-3px -3px 8px rgba(255,255,255,.04), 3px 3px 8px rgba(0,0,0,.52), 0 0 14px rgba(201,162,39,.15)
+}
+.topbar-avatar{
+  box-shadow:0 4px 16px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.18)
+}
+.topbar-email-pill{
+  background:rgba(7,14,28,.85);
+  border:1.5px solid rgba(201,162,39,.36);
+  box-shadow:
+    -3px -3px 8px rgba(255,255,255,.03),
+    3px 3px 9px rgba(0,0,0,.46),
+    inset 0 1px 0 rgba(255,255,255,.07)
+}
+
+/* ============================================================
+   HERO DASHBOARD PREVIEW
+   ============================================================ */
+.dashboard-preview{
+  background:linear-gradient(145deg,rgba(12,24,46,.78),rgba(7,16,32,.9));
+  backdrop-filter:blur(26px);
+  -webkit-backdrop-filter:blur(26px);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:24px;
+  box-shadow:
+    0 36px 84px rgba(0,0,0,.58),
+    inset 0 1px 0 rgba(255,255,255,.09),
+    -6px -6px 16px rgba(255,255,255,.03),
+    6px 6px 20px rgba(0,0,0,.54)
+}
+.dp-mini-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:13px;
+  box-shadow:-2px -2px 5px rgba(255,255,255,.025), 2px 2px 6px rgba(0,0,0,.44)
+}
+
+/* ============================================================
+   CREDIT CARDS
+   ============================================================ */
+.card-visual{
+  border-radius:18px;
+  box-shadow:
+    0 18px 52px rgba(0,0,0,.58),
+    inset 0 1px 0 rgba(255,255,255,.14),
+    inset 0 -1px 0 rgba(0,0,0,.22)
+}
+.credit-card-item:hover .card-visual{
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.68),
+    inset 0 1px 0 rgba(255,255,255,.18),
+    0 0 36px rgba(201,162,39,.2)
+}
+
+/* ============================================================
+   FORM CARD (standalone forms)
+   ============================================================ */
+.form-card{
+  background:linear-gradient(145deg,rgba(11,22,42,.92),rgba(6,13,26,.96));
+  backdrop-filter:blur(28px);
+  -webkit-backdrop-filter:blur(28px);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:28px;
+  box-shadow:
+    0 26px 68px rgba(0,0,0,.54),
+    inset 0 1px 0 rgba(255,255,255,.08),
+    -6px -6px 16px rgba(255,255,255,.03),
+    6px 6px 19px rgba(0,0,0,.52)
+}
+
+/* ============================================================
+   EMI CALCULATOR
+   ============================================================ */
+.emi-calculator{
+  background:linear-gradient(145deg,rgba(10,20,38,.88),rgba(6,13,26,.96));
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:24px;
+  box-shadow:
+    0 10px 38px rgba(0,0,0,.44),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    -5px -5px 12px rgba(255,255,255,.025),
+    5px 5px 15px rgba(0,0,0,.5)
+}
+.emi-results{
+  background:linear-gradient(145deg,rgba(201,162,39,.1),rgba(201,162,39,.04));
+  border:1px solid rgba(201,162,39,.22);
+  border-radius:16px;
+  box-shadow:0 6px 22px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.06), 0 0 22px rgba(201,162,39,.08)
+}
+
+/* ============================================================
+   CONTACT INFO ITEMS
+   ============================================================ */
+.contact-info-item{
+  background:linear-gradient(145deg,rgba(11,22,42,.82),rgba(6,14,28,.9));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  box-shadow:
+    0 6px 22px rgba(0,0,0,.36),
+    inset 0 1px 0 rgba(255,255,255,.06),
+    -3px -3px 8px rgba(255,255,255,.02),
+    3px 3px 9px rgba(0,0,0,.42)
+}
+.contact-info-item:hover{
+  box-shadow:
+    0 12px 34px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.09),
+    0 0 20px rgba(201,162,39,.1)
+}
+
+/* ============================================================
+   ABOUT — VALUE CARDS
+   ============================================================ */
+.value-card{
+  background:linear-gradient(145deg,rgba(11,22,42,.82),rgba(6,14,28,.9));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  box-shadow:
+    0 6px 22px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,255,255,.06),
+    -4px -4px 10px rgba(255,255,255,.022),
+    4px 4px 11px rgba(0,0,0,.44)
+}
+.value-card:hover{
+  box-shadow:
+    0 14px 42px rgba(0,0,0,.5),
+    inset 0 1px 0 rgba(255,255,255,.09),
+    0 0 22px rgba(201,162,39,.1)
+}
+
+/* ============================================================
+   DIGITAL FEATURE CARDS
+   ============================================================ */
+.digital-feature-card{
+  background:linear-gradient(145deg,rgba(11,22,42,.82),rgba(6,14,28,.9));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  box-shadow:
+    0 8px 28px rgba(0,0,0,.42),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    -4px -4px 10px rgba(255,255,255,.022),
+    4px 4px 11px rgba(0,0,0,.46)
+}
+.digital-feature-card:hover{
+  box-shadow:
+    0 18px 52px rgba(0,0,0,.54),
+    inset 0 1px 0 rgba(255,255,255,.1),
+    0 0 26px rgba(201,162,39,.13)
+}
+
+/* ============================================================
+   MOBILE MENU
+   ============================================================ */
+.mobile-menu{
+  background:rgba(4,9,19,.99);
+  backdrop-filter:blur(36px);
+  -webkit-backdrop-filter:blur(36px);
+  box-shadow:-8px 0 52px rgba(0,0,0,.68), inset 1px 0 0 rgba(255,255,255,.05)
+}
+.mobile-nav-links a:hover{
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06), 0 3px 12px rgba(0,0,0,.32)
+}
+
+/* ============================================================
+   TOAST NOTIFICATIONS
+   ============================================================ */
+.toast{
+  background:linear-gradient(145deg,rgba(6,13,25,.98),rgba(4,9,18,.99));
+  backdrop-filter:blur(26px);
+  -webkit-backdrop-filter:blur(26px);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:16px;
+  box-shadow:
+    0 14px 44px rgba(0,0,0,.58),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    -3px -3px 8px rgba(255,255,255,.025),
+    3px 3px 9px rgba(0,0,0,.5)
+}
+
+/* ============================================================
+   BACK TO TOP
+   ============================================================ */
+.back-to-top{
+  box-shadow:
+    0 6px 24px rgba(201,162,39,.48),
+    inset 0 1px 0 rgba(255,255,255,.28),
+    -3px -3px 8px rgba(255,255,255,.04),
+    3px 3px 9px rgba(0,0,0,.48)
+}
+.back-to-top:hover{
+  box-shadow:
+    0 10px 32px rgba(201,162,39,.62),
+    inset 0 1px 0 rgba(255,255,255,.32)
+}
+
+/* ============================================================
+   NAV THEME BUTTON
+   ============================================================ */
+.nav-theme-btn{
+  box-shadow:-2px -2px 6px rgba(255,255,255,.04), 2px 2px 6px rgba(0,0,0,.44)
+}
+.nav-theme-btn:hover{
+  box-shadow:-3px -3px 8px rgba(255,255,255,.05), 3px 3px 8px rgba(0,0,0,.5), 0 0 14px rgba(201,162,39,.18)
+}
+
+/* ============================================================
+   RESPONSIVE BANKING IMAGES
+   New rules only — no existing styles modified
+   ============================================================ */
+
+/* News card images fill the placeholder div completely */
+.news-image{font-size:0;line-height:0}
+.news-image img{
+  width:100%;height:100%;
+  object-fit:cover;
+  position:absolute;inset:0;
+  display:block;
+  border-radius:0;
+  transition:transform .45s ease
+}
+.news-card:hover .news-image img{transform:scale(1.04)}
+
+/* Security section illustration */
+.bank-vis-img{
+  width:100%;height:auto;
+  display:block;
+  max-width:100%;
+  object-fit:contain;
+  border-radius:18px;
+  margin-bottom:20px
+}
+
+/* Responsive: tablet */
+@media(max-width:768px){
+  .bank-vis-img{max-height:220px;object-fit:contain;margin-bottom:14px}
+}
+
+/* Responsive: mobile */
+@media(max-width:480px){
+  .bank-vis-img{max-height:160px;border-radius:12px;margin-bottom:10px}
+}
+
+/* Responsive: small mobile */
+@media(max-width:360px){
+  .bank-vis-img{max-height:130px;border-radius:10px;margin-bottom:8px}
+}
+
+/* ============================================================
+   TRUST BLUE + PROSPERITY GREEN — PREMIUM BANKING REDESIGN
+   Primary Blue #0B6BCE | Prosperity Green #16A34A
+   STK-26-1248 | TrustStackly Bank
+   ============================================================ */
+
+/* 1 — CSS variable override (dark→light palette) */
+:root{
+  --navy:       #F8FAFC;
+  --navy-mid:   #EFF6FF;
+  --navy-light: #DBEAFE;
+  --gold:       #0B6BCE;
+  --gold-light: #1E88E5;
+  --gold-pale:  #BFDBFE;
+  --white:      #FFFFFF;
+  --off-white:  #F0F9FF;
+  --gray:       #64748B;
+  --blue:       #1E88E5;
+  --success:    #16A34A;
+  --danger:     #EF4444;
+  --warning:    #F59E0B;
+  --shadow-sm:  0 2px 8px rgba(11,107,206,.08);
+  --shadow-md:  0 4px 20px rgba(11,107,206,.12);
+  --shadow-lg:  0 10px 30px rgba(11,107,206,.16);
+  --shadow-gold:0 4px 24px rgba(22,163,74,.22)
+}
+
+/* 2 — Global base */
+body{background:#F8FAFC;color:#0A2540}
+h1,h2,h3,h4,h5,h6{color:#0A2540}
+a{color:#0B6BCE}
+section p{color:#475569}
+.section-tag{
+  background:linear-gradient(135deg,rgba(11,107,206,.1),rgba(22,163,74,.06));
+  border-color:rgba(11,107,206,.38);color:#0B6BCE
+}
+.section-title{color:#0A2540}
+.section-title span{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text
+}
+.section-subtitle{color:#475569}
+.text-gold{color:#0B6BCE}
+
+/* 3 — Buttons */
+.btn-primary{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A);
+  color:#FFFFFF;box-shadow:0 4px 16px rgba(11,107,206,.25)
+}
+.btn-primary:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(11,107,206,.35)
+}
+.btn-outline{
+  background:transparent;
+  border-color:rgba(255,255,255,.45);color:#FFFFFF
+}
+.btn-outline:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.7)}
+.btn-outline-gold{
+  background:transparent;border-color:#0B6BCE;color:#0B6BCE
+}
+.btn-outline-gold:hover{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A);
+  color:#FFFFFF;border-color:transparent
+}
+.navbar.scrolled .btn-outline{
+  border-color:rgba(11,107,206,.35);color:#0B6BCE
+}
+.navbar.scrolled .btn-outline:hover{
+  background:rgba(11,107,206,.07);border-color:#0B6BCE
+}
+
+/* 4 — Navbar */
+.navbar.scrolled{
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid rgba(11,107,206,.1);
+  box-shadow:0 4px 24px rgba(11,107,206,.1)
+}
+.nav-links a{color:rgba(255,255,255,.88)}
+.nav-links a:hover,.nav-links a.active{color:#FFFFFF;background:rgba(255,255,255,.12)}
+.nav-links a.active::after{background:#22C55E}
+.navbar.scrolled .nav-links a{color:#334155}
+.navbar.scrolled .nav-links a:hover,
+.navbar.scrolled .nav-links a.active{color:#0B6BCE;background:rgba(11,107,206,.07)}
+.navbar.scrolled .nav-logo-name{color:#0A2540}
+.navbar.scrolled .nav-logo-tagline{color:#0B6BCE}
+.nav-theme-btn{
+  background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#FFFFFF
+}
+.nav-theme-btn:hover{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.5)}
+.navbar.scrolled .nav-theme-btn{
+  background:rgba(11,107,206,.08);border-color:rgba(11,107,206,.2);color:#0B6BCE
+}
+.navbar.scrolled .nav-theme-btn:hover{
+  background:rgba(11,107,206,.15);border-color:#0B6BCE
+}
+.mobile-menu{
+  background:rgba(255,255,255,.98);
+  border-left-color:rgba(11,107,206,.12);
+  box-shadow:-8px 0 52px rgba(11,107,206,.15)
+}
+.mobile-nav-links a{color:#334155}
+.mobile-nav-links a:hover{color:#0B6BCE;background:rgba(11,107,206,.07)}
+.menu-overlay{background:rgba(10,37,64,.35)}
+
+/* 5 — Ticker */
+.ticker-bar{
+  background:linear-gradient(90deg,#0A4D9B,#0B6BCE);
+  border-bottom-color:rgba(255,255,255,.1)
+}
+.ticker-label{
+  background:linear-gradient(135deg,#22C55E,#16A34A);color:#FFFFFF
+}
+.ticker-item{color:rgba(255,255,255,.85)}
+.ticker-item::before{color:#93C5FD}
+.ticker-item .up{color:#22C55E}
+
+/* 6 — Hero */
+.hero{
+  background:linear-gradient(135deg,#0A4D9B 0%,#0B6BCE 40%,#0d7a56 75%,#16A34A 100%)
+}
+.hero-shape-1{background:#FFFFFF;opacity:.05}
+.hero-shape-2{background:#22C55E;opacity:.1}
+.hero-shape-3{background:#BFDBFE;opacity:.08}
+.hero-badge{
+  background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);color:#FFFFFF
+}
+.hero-badge-dot{background:#22C55E}
+.hero-title{color:#FFFFFF}
+.hero-title .gold-text{
+  background:linear-gradient(135deg,#22C55E,#93C5FD);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text
+}
+.hero-subtitle{color:rgba(255,255,255,.82)}
+.hero-stat-num{color:#FFFFFF}
+.hero-stat-label{color:rgba(255,255,255,.6)}
+.carousel-dot{background:rgba(255,255,255,.3)}
+.carousel-dot.active{background:#22C55E}
+
+/* Hero dashboard preview — white glass */
+.dashboard-preview{
+  background:rgba(255,255,255,.92);backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(11,107,206,.14);
+  box-shadow:0 36px 84px rgba(11,107,206,.25)
+}
+.dashboard-preview::before{
+  background:linear-gradient(135deg,rgba(11,107,206,.2),transparent,rgba(22,163,74,.18))
+}
+.dp-title{color:#64748B}
+.dp-balance-label{color:#64748B}
+.dp-balance-amount{color:#0A4D9B;font-size:2.3rem}
+.dp-balance-change{color:#16A34A}
+.dp-mini-card{
+  background:rgba(11,107,206,.07);border-color:rgba(11,107,206,.12);color:#0A2540
+}
+.dp-mini-card-label{color:#64748B}
+.dp-mini-card-val{color:#0A4D9B}
+.dp-bar{background:linear-gradient(to top,rgba(11,107,206,.2),rgba(22,163,74,.55))}
+.dp-trans-title{color:#64748B}
+.dp-trans-name{color:#0A2540}
+.dp-trans-item{border-bottom-color:rgba(11,107,206,.07)}
+
+/* 7 — Stats section */
+.stats-section{
+  background:#FFFFFF;
+  border-top:1px solid rgba(11,107,206,.08);
+  border-bottom:1px solid rgba(11,107,206,.08)
+}
+.stat-item{border-color:rgba(11,107,206,.1)}
+.stat-number,.stat-item .stat-number{color:#0A4D9B}
+.stat-label{color:#64748B}
+
+/* 8 — Services section */
+.services-section{background:#F8FAFC}
+.service-card{
+  background:#FFFFFF;
+  border-color:rgba(11,107,206,.1);
+  box-shadow:0 4px 20px rgba(11,107,206,.07),inset 0 1px 0 rgba(255,255,255,.9);
+  color:#0A2540
+}
+.service-card:hover{
+  border-color:rgba(11,107,206,.28);
+  box-shadow:0 16px 40px rgba(11,107,206,.13);transform:translateY(-6px)
+}
+.service-icon-wrap{
+  background:linear-gradient(135deg,rgba(11,107,206,.1),rgba(22,163,74,.07));
+  border:1px solid rgba(11,107,206,.14)
+}
+.service-name{color:#0A2540}
+.service-desc{color:#475569}
+.service-link{color:#0B6BCE}
+.service-link:hover{color:#16A34A}
+
+/* 9 — Loans section */
+.loans-section{background:#EFF6FF}
+.loan-card{
+  background:#FFFFFF;
+  border-color:rgba(11,107,206,.12);
+  box-shadow:0 4px 20px rgba(11,107,206,.07),inset 0 1px 0 rgba(255,255,255,.9);
+  color:#0A2540
+}
+.loan-card:hover{
+  border-color:rgba(11,107,206,.3);
+  box-shadow:0 16px 40px rgba(11,107,206,.14);transform:translateY(-5px)
+}
+.loan-rate{color:#0A4D9B}
+.loan-rate span{color:#64748B}
+.loan-name{color:#0A2540}
+.loan-desc{color:#475569}
+.loan-badge{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A);
+  color:#FFFFFF;border:none
+}
+.loan-feature{color:#475569}
+.loan-feature::before{color:#16A34A}
+
+/* EMI calculator */
+.emi-calculator{
+  background:linear-gradient(145deg,#FFFFFF,#F8FAFC);
+  border-color:rgba(11,107,206,.12);
+  box-shadow:0 10px 38px rgba(11,107,206,.1);color:#0A2540
+}
+.emi-title{color:#0A4D9B}
+.emi-subtitle{color:#64748B}
+.form-label{color:#334155}
+.form-control{
+  background:#FFFFFF;border-color:rgba(11,107,206,.2);color:#0A2540
+}
+.form-control:focus{
+  border-color:#0B6BCE;
+  background:#FFFFFF;box-shadow:0 0 0 3px rgba(11,107,206,.1)
+}
+.form-control::placeholder{color:#94A3B8}
+input[type="range"]{background:rgba(11,107,206,.14)}
+input[type="range"]::-webkit-slider-thumb{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A);
+  box-shadow:0 2px 8px rgba(11,107,206,.35)
+}
+.range-val{color:#0B6BCE}
+.emi-results{
+  background:linear-gradient(145deg,rgba(11,107,206,.07),rgba(22,163,74,.04));
+  border-color:rgba(11,107,206,.15);
+  box-shadow:0 6px 22px rgba(11,107,206,.08)
+}
+.emi-result-item{border-bottom-color:rgba(11,107,206,.07)}
+.emi-result-label{color:#64748B}
+.emi-result-value{color:#0A4D9B}
+.emi-monthly{color:#16A34A !important}
+
+/* 10 — Credit Cards section */
+.cards-section{background:#F8FAFC}
+.card-type-name{color:#0A2540}
+.card-tagline{color:#64748B}
+.benefit-tag{
+  background:rgba(11,107,206,.08);
+  border-color:rgba(11,107,206,.2);color:#0B6BCE
+}
+
+/* 11 — Security section */
+.security-section{
+  background:linear-gradient(135deg,#EFF6FF,#F0FDF4)
+}
+.security-feature{
+  background:#FFFFFF;border-color:rgba(11,107,206,.1);
+  box-shadow:0 2px 12px rgba(11,107,206,.06)
+}
+.security-feature:hover{
+  border-color:rgba(11,107,206,.28);background:#FFFFFF;
+  box-shadow:0 8px 28px rgba(11,107,206,.12)
+}
+.security-feature-icon{
+  background:linear-gradient(135deg,rgba(11,107,206,.12),rgba(22,163,74,.07))
+}
+.security-feature-text h4{color:#0A2540}
+.security-feature-text p{color:#475569}
+.security-badge-main{
+  background:rgba(255,255,255,.9);
+  border-color:rgba(11,107,206,.14);
+  box-shadow:0 10px 40px rgba(11,107,206,.12)
+}
+.security-badge-main h3{color:#0A2540}
+.security-badge-main p{color:#475569}
+.sec-badge{
+  background:rgba(11,107,206,.08);
+  border-color:rgba(11,107,206,.22);color:#0B6BCE
+}
+
+/* 12 — Why Choose Us */
+.why-section{
+  background:linear-gradient(135deg,#F0F9FF,#F0FDF4)
+}
+.why-card{
+  background:#FFFFFF;border-color:rgba(11,107,206,.1);
+  box-shadow:0 4px 20px rgba(11,107,206,.07);color:#0A2540
+}
+.why-card:hover{
+  border-color:rgba(11,107,206,.28);
+  box-shadow:0 16px 40px rgba(11,107,206,.13);
+  transform:translateY(-4px)
+}
+.why-title{color:#0A2540}
+.why-desc{color:#475569}
+
+/* 13 — Testimonials */
+.testimonials-section{background:#FFFFFF}
+.testimonial-card{
+  background:#F8FAFC;border-color:rgba(11,107,206,.1);
+  box-shadow:0 4px 20px rgba(11,107,206,.07)
+}
+.testimonial-stars{color:#16A34A}
+.testimonial-text{color:#475569}
+.testimonial-name{color:#0A2540}
+.testimonial-role{color:#64748B}
+.testimonial-avatar{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A);color:#FFFFFF
+}
+
+/* 14 — News section */
+.news-section{background:#EFF6FF}
+.news-card{
+  background:#FFFFFF;border-color:rgba(11,107,206,.1);
+  box-shadow:0 4px 20px rgba(11,107,206,.07);color:#0A2540
+}
+.news-card:hover{
+  border-color:rgba(11,107,206,.28);transform:translateY(-5px);
+  box-shadow:0 16px 40px rgba(11,107,206,.13)
+}
+.news-category{color:#0B6BCE}
+.news-title{color:#0A2540}
+.news-excerpt{color:#475569}
+.news-meta{color:#94A3B8}
+.news-image::after{
+  background:linear-gradient(to bottom,transparent,rgba(10,37,64,.35))
+}
+
+/* 15 — FAQ */
+.faq-section{background:#F8FAFC}
+.faq-item{
+  background:#FFFFFF;border-color:rgba(11,107,206,.1);
+  box-shadow:0 2px 12px rgba(11,107,206,.05)
+}
+.faq-item.open{
+  border-color:rgba(11,107,206,.28);
+  box-shadow:0 8px 28px rgba(11,107,206,.1)
+}
+.faq-question:hover{background:rgba(11,107,206,.03)}
+.faq-question h4{color:#0A2540}
+.faq-arrow{
+  background:rgba(11,107,206,.08);color:#0B6BCE
+}
+.faq-item.open .faq-arrow{
+  background:rgba(11,107,206,.15);transform:rotate(180deg)
+}
+.faq-answer p{color:#475569}
+
+/* 16 — Footer */
+.footer{
+  background:linear-gradient(180deg,#0A2540,#061628);
+  border-top:1px solid rgba(11,107,206,.2)
+}
+.footer-col h4::after{background:linear-gradient(90deg,#0B6BCE,#16A34A)}
+.footer-links a:hover{color:#93C5FD}
+.social-icon:hover{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A);
+  border-color:transparent;color:#FFFFFF
+}
+.footer-tagline-text{color:#93C5FD}
+
+/* 17 — Products section (override previous version) */
+.products-section{background:#F8FAFC}
+.product-card{
+  background:#FFFFFF;border-color:rgba(11,107,206,.1);
+  box-shadow:0 4px 20px rgba(11,107,206,.08),inset 0 1px 0 rgba(255,255,255,.9)
+}
+.product-card:hover{
+  border-color:rgba(11,107,206,.28);
+  box-shadow:0 22px 56px rgba(11,107,206,.15),0 6px 20px rgba(22,163,74,.08)
+}
+.product-title{color:#0A2540}
+.product-desc{color:#475569}
+.product-category-badge{
+  background:rgba(255,255,255,.88);
+  border-color:rgba(11,107,206,.35);color:#0B6BCE;
+  backdrop-filter:blur(8px)
+}
+.product-benefit{
+  background:rgba(22,163,74,.07);
+  border-color:rgba(22,163,74,.2);color:#15803D
+}
+.product-benefit .benefit-icon{color:#16A34A}
+.btn-product-cta{
+  background:linear-gradient(135deg,rgba(11,107,206,.08),rgba(22,163,74,.05));
+  border-color:rgba(11,107,206,.3);color:#0B6BCE
+}
+.btn-product-cta:hover{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A);
+  color:#FFFFFF;border-color:transparent;
+  box-shadow:0 8px 24px rgba(11,107,206,.3)
+}
+
+/* 18 — Glass card utility */
+.glass-card{
+  background:rgba(255,255,255,.75);backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-color:rgba(11,107,206,.12);
+  box-shadow:0 10px 30px rgba(11,107,206,.1)
+}
+.glass-card:hover{
+  background:rgba(255,255,255,.9);border-color:rgba(11,107,206,.25);
+  box-shadow:0 20px 50px rgba(11,107,206,.14);transform:translateY(-5px)
+}
+
+/* 19 — Back to top */
+.back-to-top{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A);
+  color:#FFFFFF;
+  box-shadow:0 6px 24px rgba(11,107,206,.38)
+}
+.back-to-top:hover{box-shadow:0 10px 32px rgba(11,107,206,.55)}
+
+/* 20 — Neumorphism shadow overrides for light theme */
+.dashboard-sidebar{
+  background:linear-gradient(180deg,#FFFFFF,#F8FAFC);
+  border-right:1px solid rgba(11,107,206,.08);
+  box-shadow:6px 0 44px rgba(11,107,206,.1)
+}
+.sidebar-nav-item.active{
+  box-shadow:0 4px 18px rgba(11,107,206,.18),inset 0 1px 0 rgba(255,255,255,.9)
+}
+.balance-card{
+  background:linear-gradient(145deg,#FFFFFF,#F8FAFC);
+  border-color:rgba(11,107,206,.1);
+  box-shadow:0 8px 28px rgba(11,107,206,.1),-5px -5px 12px rgba(255,255,255,.9),5px 5px 14px rgba(11,107,206,.06)
+}
+.dashboard-panel{
+  background:linear-gradient(145deg,#FFFFFF,#F8FAFC);
+  border-color:rgba(11,107,206,.08);
+  box-shadow:0 8px 30px rgba(11,107,206,.08)
+}
+.quick-action-btn{
+  background:linear-gradient(145deg,#FFFFFF,#F0F9FF);
+  border-color:rgba(11,107,206,.1);
+  box-shadow:0 4px 15px rgba(11,107,206,.08),-3px -3px 8px rgba(255,255,255,.9),3px 3px 9px rgba(11,107,206,.06)
+}
+.quick-action-btn:hover{
+  box-shadow:0 8px 24px rgba(11,107,206,.14),inset 0 1px 0 rgba(255,255,255,.9)
+}
+.form-card{
+  background:rgba(255,255,255,.97);backdrop-filter:blur(28px);
+  border-color:rgba(11,107,206,.1);
+  box-shadow:0 26px 68px rgba(11,107,206,.12)
+}
+.faq-item{
+  box-shadow:0 4px 18px rgba(11,107,206,.06),-3px -3px 7px rgba(255,255,255,.9),3px 3px 8px rgba(11,107,206,.05)
+}
+.faq-item.open{
+  box-shadow:0 8px 30px rgba(11,107,206,.12),inset 0 1px 0 rgba(255,255,255,.9)
+}
+
+/* 21 — Loan badge text + feature list refinements */
+.loan-feature{
+  padding:6px 0 6px 14px;
+  border-left:2px solid #0B6BCE
+}
+
+/* 22 — Carousel indicators in hero (override dark) */
+.carousel-indicators{opacity:1}
+
+/* 23 — Topbar (dashboard) */
+.topbar-btn{
+  background:rgba(255,255,255,.8);border-color:rgba(11,107,206,.1);
+  box-shadow:-2px -2px 6px rgba(255,255,255,.9),2px 2px 6px rgba(11,107,206,.07)
+}
+.topbar-btn:hover{
+  box-shadow:-3px -3px 8px rgba(255,255,255,.9),3px 3px 8px rgba(11,107,206,.1)
+}
+
+/* 24 — Toast */
+.toast{
+  background:rgba(255,255,255,.97);backdrop-filter:blur(26px);
+  border-color:rgba(11,107,206,.12);color:#0A2540;
+  box-shadow:0 14px 44px rgba(11,107,206,.15)
+}
+
+/* 25 — Responsive tweaks for new theme */
+@media(max-width:768px){
+  .why-section,.testimonials-section{background:#F8FAFC}
+}
+
+/* ============================================================
+   READABILITY & CONTRAST FIXES — WCAG AA Compliant
+   All rgba(255,255,255,…) text on light backgrounds corrected
+   ============================================================ */
+
+/* — About page: value cards — */
+.value-card{
+  background:#FFFFFF;border-color:rgba(11,107,206,.1);
+  box-shadow:0 4px 20px rgba(11,107,206,.07)
+}
+.value-card:hover{border-color:rgba(11,107,206,.28);transform:translateY(-4px)}
+.value-title{color:#0A2540}
+.value-desc{color:#475569;line-height:1.65}
+
+/* — About page: team cards — */
+.team-card{
+  background:#FFFFFF;border-color:rgba(11,107,206,.1);
+  box-shadow:0 4px 20px rgba(11,107,206,.07)
+}
+.team-card:hover{border-color:rgba(11,107,206,.28);transform:translateY(-4px)}
+.team-avatar{
+  background:linear-gradient(135deg,#DBEAFE,#EFF6FF);
+  border-bottom:1px solid rgba(11,107,206,.1)
+}
+.team-name{color:#0A2540;font-weight:700}
+.team-role{color:#0B6BCE}
+.team-desc{color:#475569;line-height:1.6}
+
+/* — Digital Banking: feature cards — */
+.digital-feature-card{
+  background:#FFFFFF;border-color:rgba(11,107,206,.1);
+  box-shadow:0 4px 20px rgba(11,107,206,.07)
+}
+.digital-feature-card:hover{
+  border-color:rgba(11,107,206,.28);transform:translateY(-5px);
+  box-shadow:0 18px 50px rgba(11,107,206,.13)
+}
+.digital-feature-card .feature-num{
+  color:rgba(11,107,206,.14);text-shadow:none
+}
+.digital-feature-icon{
+  background:linear-gradient(135deg,rgba(11,107,206,.1),rgba(22,163,74,.07))
+}
+.digital-feature-title{color:#0A2540;font-weight:700}
+.digital-feature-desc{color:#475569;line-height:1.65}
+
+/* — Contact page: info items — */
+.contact-info-item{
+  background:#FFFFFF;border-color:rgba(11,107,206,.1);
+  box-shadow:0 4px 20px rgba(11,107,206,.07)
+}
+.contact-info-item:hover{border-color:rgba(11,107,206,.28)}
+.contact-info-icon{
+  background:linear-gradient(135deg,rgba(11,107,206,.1),rgba(22,163,74,.07))
+}
+.contact-info-text h4{color:#0A2540;font-weight:700}
+.contact-info-text p{color:#475569;line-height:1.6}
+
+/* — Map placeholder — */
+.map-placeholder{
+  background:#FFFFFF;border-color:rgba(11,107,206,.1)
+}
+.map-placeholder p{color:#94A3B8}
+.map-placeholder .map-icon{opacity:.4}
+
+/* — Stats section: dividers now use blue tint on light bg — */
+.stat-item{
+  border-right:1px solid rgba(11,107,206,.1) !important;
+  border-top:none !important
+}
+.stat-item:nth-child(5),.stat-item:last-child{border-right:none !important}
+@media(max-width:1024px){
+  .stat-item:nth-child(3n){border-right:none !important}
+  .stat-item:nth-child(n+4){border-top:1px solid rgba(11,107,206,.1) !important}
+}
+@media(max-width:768px){
+  .stat-item:nth-child(even){border-right:none !important}
+  .stat-item:nth-child(n+3){border-top:1px solid rgba(11,107,206,.1) !important}
+}
+
+/* — Dashboard chart bar (gold → blue-green) — */
+.chart-bar-inner{
+  background:linear-gradient(to top,rgba(11,107,206,.65),rgba(22,163,74,.35))
+}
+.chart-bar-label{color:#94A3B8}
+
+/* — Panel action link — */
+.panel-action{color:#0B6BCE}
+
+/* — Dashboard greeting (dashboard has dark bg, but fix p tag) — */
+.dashboard-greeting p{color:rgba(255,255,255,.6)}
+
+/* — Loan feature label text — */
+.loan-feature{
+  color:#334155;font-size:.82rem;line-height:1.55;
+  padding:5px 0 5px 12px;border-left:2px solid rgba(11,107,206,.4)
+}
+
+/* — Section p tags in inner-page content areas — */
+.services-section p,
+.loans-section p,
+.why-section p,
+.security-section p,
+.news-section p,
+.faq-section p,
+.products-section p{color:#475569}
+
+/* — Heading h4 inside cards on light bg — */
+.service-card h3,.loan-card h3,.why-card h4,
+.news-card h3,.product-card h3,
+.value-card h3,.team-card h4,.digital-feature-card h3,
+.contact-info-text h4{color:#0A2540}
+
+/* — Glass card on light page (services.html account type cards) — */
+.glass-card{color:#0A2540}
+.glass-card h2,.glass-card h3,.glass-card h4,.glass-card p{color:inherit}
+.glass-card ul li{color:#475569}
+.glass-card .section-tag{margin-bottom:8px}
+
+/* — Services.html account list items — */
+.glass-card li,
+li[style*="color:rgba(255,255,255"]{color:#334155 !important}
+
+/* — Support/about paragraph text override — */
+p[style*="color:rgba(255,255,255"]{color:#475569 !important}
+div[style*="color:rgba(255,255,255,.5"]{color:#475569 !important}
+div[style*="color:rgba(255,255,255,.4"]{color:#64748B !important}
+div[style*="color:rgba(255,255,255,.3"]{color:#94A3B8 !important}
+div[style*="color:rgba(255,255,255,.2"]{color:#94A3B8 !important}
+
+/* — Small label text (feature sub-text, stat labels) — */
+[style*="color:rgba(255,255,255,.62"]{color:#475569 !important}
+[style*="color:rgba(255,255,255,.6"]{color:#334155 !important}
+[style*="color:rgba(255,255,255,.58"]{color:#475569 !important}
+[style*="color:rgba(255,255,255,.55"]{color:#475569 !important}
+[style*="color:rgba(255,255,255,.52"]{color:#475569 !important}
+[style*="color:rgba(255,255,255,.5)"]{color:#475569 !important}
+[style*="color:rgba(255,255,255,.48"]{color:#475569 !important}
+[style*="color:rgba(255,255,255,.45"]{color:#64748B !important}
+[style*="color:rgba(255,255,255,.42"]{color:#64748B !important}
+[style*="color:rgba(255,255,255,.38"]{color:#94A3B8 !important}
+[style*="color:rgba(255,255,255,.35"]{color:#94A3B8 !important}
+[style*="color:rgba(255,255,255,.28"]{color:#94A3B8 !important}
+[style*="color:rgba(255,255,255,.22"]{color:#94A3B8 !important}
+
+/* — Exception: dashboard page keeps white text (dark bg) — */
+.dashboard-page [style*="color:rgba(255,255,255"],
+.dashboard-page [style*="color:rgba(255,255,255"]{color:inherit !important}
+.dashboard-page p{color:rgba(255,255,255,.6) !important}
+.dashboard-page h2,.dashboard-page h3,.dashboard-page h4{color:#FFFFFF !important}
+.dashboard-page .trans-name{color:#FFFFFF !important}
+.dashboard-page .trans-date{color:rgba(255,255,255,.45) !important}
+
+/* — Exception: auth pages keep white text (dark bg) — */
+.auth-page [style*="color:rgba(255,255,255"]{color:inherit !important}
+.auth-page p,.auth-page label,.auth-page .form-label{color:rgba(255,255,255,.8) !important}
+.auth-card .form-label{color:rgba(255,255,255,.78) !important}
+.auth-card .checkbox-label{color:rgba(255,255,255,.72) !important}
+.auth-card .auth-footer-note{color:rgba(255,255,255,.55) !important}
+.auth-card .strength-text{color:rgba(255,255,255,.55) !important}
+.auth-card .form-divider-text{color:rgba(255,255,255,.42) !important}
+.auth-card .form-divider-line{background:rgba(255,255,255,.12) !important}
+.auth-card .input-icon{color:rgba(255,255,255,.45) !important}
+.auth-card .password-toggle{color:rgba(255,255,255,.5) !important}
+.auth-card .auth-card-title{color:#FFFFFF !important}
+.auth-card .auth-card-subtitle{color:rgba(255,255,255,.55) !important}
+
+/* — Exception: page header (dark gradient bg) — */
+.page-header .page-header-title{color:#FFFFFF !important}
+.page-header .page-header-subtitle{color:rgba(255,255,255,.68) !important}
+.page-header .breadcrumb,.page-header .breadcrumb a{color:rgba(255,255,255,.5) !important}
+.page-header .section-tag{
+  background:rgba(255,255,255,.14) !important;
+  border-color:rgba(255,255,255,.3) !important;
+  color:#FFFFFF !important
+}
+
+/* — Exception: ticker (dark blue bg) — */
+.ticker-bar [style*="color:rgba(255,255,255"]{color:inherit !important}
+
+/* — Exception: hero section (dark gradient bg) — */
+.hero [style*="color:rgba(255,255,255"]{color:inherit !important}
+
+/* — Exception: footer (dark bg) — */
+.footer [style*="color:rgba(255,255,255"]{color:inherit !important}
+.footer-copy{color:rgba(255,255,255,.45)}
+.footer-legal a{color:rgba(255,255,255,.38)}
+.footer-legal a:hover{color:#93C5FD}
+.footer-contact-text{color:rgba(255,255,255,.55)}
+
+/* — Typography improvements — */
+body{font-size:16px;line-height:1.6}
+.section-subtitle{
+  font-size:1rem;line-height:1.75;letter-spacing:0
+}
+.service-desc,.loan-desc,.why-desc,.product-desc{
+  line-height:1.68;font-size:.84rem
+}
+.news-excerpt{line-height:1.65}
+.faq-answer p{line-height:1.72;font-size:.88rem}
+
+/* — Input & form elements on light bg (non-auth) — */
+.emi-calculator .form-label{color:#334155 !important}
+.emi-calculator .form-control{color:#0A2540 !important;background:#FFFFFF !important}
+.emi-calculator .range-val{color:#0B6BCE !important}
+.emi-calculator .strength-text{color:#64748B !important}
+
+/* — Page-level card borders (was invisible white) — */
+.service-card,.loan-card,.why-card,.product-card,
+.news-card,.faq-item,.testimonial-card{
+  border-width:1px;border-style:solid
+}
+
+/* — Loan features tick mark — */
+.loan-features .loan-feature::before{content:'✓ ';color:#16A34A;font-weight:700}
+
+/* — Benefit tag (credit cards) — */
+.benefit-tag{font-size:.68rem;font-weight:600}
+
+/* — Card section headings — */
+.card-type-name{font-size:.96rem;font-weight:700;color:#0A2540}
+.card-tagline{font-size:.78rem;color:#64748B}
+
+/* — Section header underline accent — */
+.section-title::after{
+  content:'';display:block;width:56px;height:3px;
+  background:linear-gradient(90deg,#0B6BCE,#16A34A);
+  border-radius:2px;margin:10px auto 0
+}
+.text-left .section-title::after,.security-grid .section-title::after{
+  margin:10px 0 0
+}
+
+/* — Inline news card image gradient fix — */
+.news-image::after{
+  background:linear-gradient(to bottom,transparent 50%,rgba(10,37,64,.4) 100%)
+}
+
+/* — Responsive: prevent text overflow — */
+@media(max-width:480px){
+  .product-title{font-size:.9rem}
+  .product-desc{font-size:.76rem}
+  .section-title::after{width:40px;margin-top:8px}
+  .loan-card{padding:20px 16px}
+  .service-card{padding:18px 14px}
+}
+@media(max-width:360px){
+  body{font-size:15px}
+  .section-subtitle{font-size:.9rem}
+  .product-benefit{font-size:.7rem}
+}
+
+/* 26 — [data-theme=dark] keeps legacy dark look when toggled */
+[data-theme="dark"] body{background:#0a1628;color:#FFFFFF}
+[data-theme="dark"] h1,[data-theme="dark"] h2,
+[data-theme="dark"] h3,[data-theme="dark"] h4{color:#FFFFFF}
+[data-theme="dark"] .navbar.scrolled{
+  background:rgba(8,18,34,.96);border-bottom-color:rgba(201,162,39,.18)
+}
+[data-theme="dark"] .navbar.scrolled .nav-links a{color:rgba(255,255,255,.78)}
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .loan-card,
+[data-theme="dark"] .why-card,
+[data-theme="dark"] .news-card,
+[data-theme="dark"] .faq-item,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .product-card{
+  background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08);color:#FFFFFF
+}
+[data-theme="dark"] .stats-section{
+  background:linear-gradient(135deg,rgba(201,162,39,.07),rgba(0,168,232,.04))
+}
+[data-theme="dark"] .services-section,
+[data-theme="dark"] .faq-section{background:#0a1628}
+[data-theme="dark"] .loans-section{background:#0a1628}
+[data-theme="dark"] .why-section,
+[data-theme="dark"] .news-section{background:#060c18}
+[data-theme="dark"] .testimonials-section{background:#0a1628}
+[data-theme="dark"] .security-section{
+  background:linear-gradient(135deg,#060c18,#0a1628)
+}
+[data-theme="dark"] .section-title{color:#FFFFFF}
+[data-theme="dark"] .section-subtitle{color:rgba(255,255,255,.6)}
+[data-theme="dark"] .section-tag{
+  background:linear-gradient(135deg,rgba(201,162,39,.18),rgba(232,185,35,.08));
+  border-color:rgba(201,162,39,.4);color:#e8b923
+}
+[data-theme="dark"] .products-section .section-title,
+.products-section .section-title{
+  color:#0A2540
+}
+[data-theme="dark"] .products-section .section-subtitle,
+.products-section .section-subtitle{
+  color:#475569
+}
+
+/* ============================================================
+   PRODUCTS & SERVICES SECTION
+   ============================================================ */
+.products-section{
+  background:linear-gradient(180deg,var(--navy-mid) 0%,var(--navy) 100%);
+  position:relative;overflow:hidden
+}
+.products-section::before{
+  content:'';position:absolute;top:-30%;left:-15%;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(11,107,206,.06) 0%,transparent 70%);
+  pointer-events:none
+}
+.products-section::after{
+  content:'';position:absolute;bottom:-20%;right:-10%;
+  width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,162,39,.04) 0%,transparent 70%);
+  pointer-events:none
+}
+
+/* Grid: 4 → 2 → 1 columns */
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+  margin-top:2.5rem
+}
+
+/* Card — glassmorphism + neumorphism */
+.product-card{
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .38s cubic-bezier(.25,.8,.25,1),
+             box-shadow .38s ease,
+             border-color .38s ease,
+             background .38s ease;
+  box-shadow:
+    0 4px 24px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.07),
+    inset 0 -1px 0 rgba(0,0,0,.1),
+    -4px -4px 10px rgba(255,255,255,.022),
+    4px 4px 12px rgba(0,0,0,.38)
+}
+.product-card:hover{
+  transform:translateY(-9px);
+  background:rgba(255,255,255,.07);
+  border-color:rgba(201,162,39,.28);
+  box-shadow:
+    0 22px 56px rgba(0,0,0,.38),
+    0 8px 24px rgba(11,107,206,.12),
+    inset 0 1px 0 rgba(255,255,255,.1),
+    0 0 32px rgba(201,162,39,.08)
+}
+
+/* Image wrapper */
+.product-img-wrap{
+  position:relative;overflow:hidden;
+  height:190px;flex-shrink:0
+}
+.product-img{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+  transition:transform .5s ease
+}
+.product-card:hover .product-img{transform:scale(1.06)}
+
+/* Gradient overlay on image for text contrast */
+.product-img-wrap::after{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(5,10,24,.55) 100%);
+  pointer-events:none
+}
+
+/* Category badge on image */
+.product-category-badge{
+  position:absolute;top:12px;left:12px;z-index:2;
+  background:rgba(10,22,48,.72);
+  border:1px solid rgba(201,162,39,.42);
+  color:var(--gold-light);
+  padding:3px 13px;border-radius:20px;
+  font-size:.66rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)
+}
+
+/* Card content area */
+.product-body{
+  padding:18px 20px 20px;
+  display:flex;flex-direction:column;flex:1;gap:9px
+}
+.product-title{
+  font-size:.98rem;font-weight:800;color:var(--white);line-height:1.25;
+  letter-spacing:.2px
+}
+.product-desc{
+  font-size:.78rem;color:rgba(255,255,255,.58);line-height:1.68;flex:1
+}
+
+/* Benefit row */
+.product-benefit{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(11,107,206,.1);
+  border:1px solid rgba(11,107,206,.22);
+  border-radius:9px;padding:7px 11px;
+  font-size:.73rem;color:rgba(100,185,255,.88);font-weight:600;line-height:1.3
+}
+.product-benefit .benefit-icon{
+  color:var(--success);font-weight:900;font-size:.82rem;flex-shrink:0
+}
+
+/* CTA button */
+.btn-product-cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  padding:10px 18px;
+  background:linear-gradient(135deg,rgba(201,162,39,.14),rgba(201,162,39,.07));
+  border:1px solid rgba(201,162,39,.38);
+  border-radius:50px;
+  color:var(--gold-light);
+  font-size:.78rem;font-weight:700;letter-spacing:.3px;
+  transition:all .28s ease;
+  text-decoration:none;margin-top:2px;width:100%
+}
+.btn-product-cta:hover{
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  color:var(--navy);border-color:transparent;
+  box-shadow:0 6px 22px rgba(201,162,39,.38)
+}
+.btn-product-cta .cta-arrow{
+  transition:transform .28s ease;display:inline-block
+}
+.btn-product-cta:hover .cta-arrow{transform:translateX(5px)}
+
+/* Responsive */
+@media(max-width:1100px){
+  .products-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+}
+@media(max-width:580px){
+  .products-grid{grid-template-columns:1fr;gap:16px}
+  .product-img-wrap{height:210px}
+}
+@media(max-width:360px){
+  .product-img-wrap{height:180px}
+  .product-body{padding:14px 16px 16px}
+}
+
+/* ============================================================
+   DASHBOARD — Complete Light-Theme Text Fix
+   Cards: white bg → all text must be dark and readable
+   Sidebar: white bg → dark text throughout
+   STK-26-1248
+   ============================================================ */
+
+/* Page background: keep deep navy for drama, cards pop as white */
+.dashboard-page{background:#0A1628;min-height:100vh}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+.dashboard-sidebar{
+  background:linear-gradient(180deg,#FFFFFF,#F8FAFC);
+  border-right:1px solid rgba(11,107,206,.12);
+  box-shadow:4px 0 24px rgba(11,107,206,.1)
+}
+.sidebar-logo-name{color:#0A2540 !important;font-weight:800}
+.sidebar-section-label{
+  color:#94A3B8 !important;font-weight:600;
+  font-size:.63rem;letter-spacing:1.5px
+}
+.sidebar-nav-item{
+  color:#334155 !important;font-weight:500;
+  border-radius:10px
+}
+.sidebar-nav-item:hover{
+  background:rgba(11,107,206,.07) !important;
+  color:#0B6BCE !important
+}
+.sidebar-nav-item.active{
+  background:linear-gradient(135deg,rgba(11,107,206,.12),rgba(22,163,74,.07)) !important;
+  color:#0B6BCE !important;
+  border:1px solid rgba(11,107,206,.22) !important;
+  font-weight:600
+}
+.sidebar-nav-icon{font-size:1.1rem}
+
+/* ── Topbar ──────────────────────────────────────────────── */
+.dashboard-greeting h2{color:#FFFFFF !important;font-size:1.3rem;font-weight:800}
+.dashboard-greeting p{color:rgba(255,255,255,.65) !important;font-size:.82rem}
+.topbar-btn{
+  background:rgba(255,255,255,.1) !important;
+  border-color:rgba(255,255,255,.18) !important;
+  color:rgba(255,255,255,.8) !important
+}
+.topbar-btn:hover{
+  background:rgba(255,255,255,.18) !important;
+  border-color:rgba(255,255,255,.35) !important;
+  color:#FFFFFF !important
+}
+.topbar-avatar{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A)
+}
+.topbar-email-pill{
+  background:rgba(255,255,255,.08) !important;
+  border-color:rgba(11,107,206,.45) !important
+}
+.topbar-email-text{color:#93C5FD !important;font-weight:600}
+.topbar-email-icon{color:#93C5FD !important}
+
+/* ── Balance cards (white on dark page) ──────────────────── */
+.balance-card{
+  background:linear-gradient(145deg,#FFFFFF,#F8FAFC);
+  border:1px solid rgba(11,107,206,.12);
+  box-shadow:0 4px 20px rgba(11,107,206,.1),
+    inset 0 1px 0 rgba(255,255,255,.9)
+}
+.balance-card:hover{
+  border-color:rgba(11,107,206,.28);
+  box-shadow:0 12px 36px rgba(11,107,206,.15)
+}
+.balance-card-amount{
+  color:#0A4D9B !important;
+  font-size:1.65rem;font-weight:800;line-height:1
+}
+.balance-card-label{
+  color:#64748B !important;
+  font-size:.74rem;font-weight:500
+}
+.balance-card-icon{
+  background:linear-gradient(135deg,rgba(11,107,206,.1),rgba(22,163,74,.07));
+  border-radius:11px
+}
+.badge-green{background:rgba(22,163,74,.12);color:#16A34A;font-weight:600}
+.badge-red{background:rgba(239,68,68,.1);color:#DC2626;font-weight:600}
+.badge-blue{background:rgba(11,107,206,.1);color:#0B6BCE;font-weight:600}
+.badge-gold{background:rgba(11,107,206,.1);color:#0B6BCE;font-weight:600}
+
+/* ── Dashboard panels (white on dark page) ───────────────── */
+.dashboard-panel{
+  background:linear-gradient(145deg,#FFFFFF,#F8FAFC);
+  border:1px solid rgba(11,107,206,.1);
+  box-shadow:0 4px 20px rgba(11,107,206,.08)
+}
+.dashboard-panel-title{
+  color:#0A2540 !important;
+  font-size:.92rem;font-weight:700
+}
+.panel-action{color:#0B6BCE !important;font-weight:600}
+.panel-action:hover{color:#16A34A !important}
+
+/* ── Transaction list ────────────────────────────────────── */
+.trans-item{
+  border-bottom:1px solid rgba(11,107,206,.07) !important
+}
+.trans-icon{
+  background:rgba(11,107,206,.08) !important;
+  border:1px solid rgba(11,107,206,.1) !important;
+  border-radius:11px
+}
+.trans-name{
+  color:#0A2540 !important;
+  font-size:.86rem;font-weight:600
+}
+.trans-date{
+  color:#94A3B8 !important;
+  font-size:.7rem
+}
+.trans-amount{font-size:.92rem;font-weight:700}
+.trans-amount.credit{color:#16A34A !important}
+.trans-amount.debit{color:#DC2626 !important}
+
+/* ── Quick action buttons ─────────────────────────────────── */
+.quick-action-btn{
+  background:linear-gradient(145deg,#FFFFFF,#F0F9FF) !important;
+  border:1px solid rgba(11,107,206,.1) !important;
+  color:#0A2540 !important;
+  border-radius:14px
+}
+.quick-action-btn .qa-icon{font-size:1.35rem}
+.quick-action-btn span{
+  color:#334155 !important;
+  font-size:.7rem;font-weight:600
+}
+.quick-action-btn:hover{
+  background:rgba(11,107,206,.07) !important;
+  border-color:rgba(11,107,206,.25) !important;
+  color:#0B6BCE !important
+}
+.quick-action-btn:hover span{color:#0B6BCE !important}
+
+/* ── Spending chart ───────────────────────────────────────── */
+.chart-area{
+  background:rgba(11,107,206,.04) !important;
+  border-radius:12px;padding:12px
+}
+.chart-bar-inner{
+  background:linear-gradient(to top,rgba(11,107,206,.6),rgba(22,163,74,.45)) !important;
+  border-radius:4px 4px 0 0
+}
+.chart-bar-label{
+  color:#64748B !important;
+  font-size:.64rem;font-weight:500
+}
+
+/* ── Notifications panel ─────────────────────────────────── */
+.notif-text{color:#475569 !important;line-height:1.55}
+.notif-time{color:#94A3B8 !important}
+.notif-item{border-bottom-color:rgba(11,107,206,.08) !important}
+
+/* ── Loan progress bar ───────────────────────────────────── */
+.loan-progress{background:rgba(11,107,206,.1) !important;border-radius:4px}
+.loan-progress-fill{
+  background:linear-gradient(90deg,#0B6BCE,#16A34A) !important
+}
+
+/* ── Responsive dashboard ────────────────────────────────── */
+@media(max-width:768px){
+  .dashboard-main{background:#0A1628;padding:16px}
+  .dashboard-greeting h2{font-size:1.15rem !important}
+  .balance-card-amount{font-size:1.4rem !important}
+}
+@media(max-width:480px){
+  .balance-card{padding:14px}
+  .balance-card-amount{font-size:1.25rem !important}
+  .quick-action-btn{padding:11px 6px}
+  .quick-action-btn span{font-size:.62rem !important}
+  .dashboard-panel{padding:16px}
+}
