@@ -1,5 +1,5 @@
 ﻿/* ============================================================
-   TrustStackly Bank — Main JavaScript
+   Stackly Bank — Main JavaScript
    Prepared by: Andra Abhishek | ID: STK-26-1248
    ============================================================ */
 

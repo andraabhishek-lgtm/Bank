@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="TrustStackly Bank — My Account Dashboard">
-<title>Dashboard — TrustStackly Bank</title>
+<meta name="description" content="Stackly Bank — My Account Dashboard">
+<title>Dashboard — Stackly Bank</title>
 <link rel="stylesheet" href="css/styles.css">
 <style>
 .loan-progress{background:rgba(11,107,206,.12);border-radius:4px;height:6px;margin-top:8px;overflow:hidden}
@@ -24,8 +24,8 @@
   <!-- SIDEBAR -->
   <aside class="dashboard-sidebar">
     <a href="index.html" class="sidebar-logo">
-      <img class="sidebar-logo-icon" src="images/logo.webp" alt="TrustStackly">
-      <span class="sidebar-logo-name">TrustStackly</span>
+      <img class="sidebar-logo-icon" src="images/logo.webp" alt="Stackly">
+      <span class="sidebar-logo-name">Stackly</span>
     </a>
 
     <div class="sidebar-nav">
@@ -33,13 +33,13 @@
       <a class="sidebar-nav-item active" href="dashboard.html">
         <span class="sidebar-nav-icon">🏠</span> Dashboard
       </a>
-      <a class="sidebar-nav-item" href="dashboard.html">
+      <a class="sidebar-nav-item" href="404.html">
         <span class="sidebar-nav-icon">💳</span> Accounts
       </a>
-      <a class="sidebar-nav-item" href="dashboard.html">
+      <a class="sidebar-nav-item" href="404.html">
         <span class="sidebar-nav-icon">↕️</span> Transfers
       </a>
-      <a class="sidebar-nav-item" href="dashboard.html">
+      <a class="sidebar-nav-item" href="404.html">
         <span class="sidebar-nav-icon">🧾</span> Bill Payments
       </a>
 
@@ -58,14 +58,14 @@
       </a>
 
       <div class="sidebar-section-label">Tools</div>
-      <a class="sidebar-nav-item" href="dashboard.html">
+      <a class="sidebar-nav-item" href="404.html">
         <span class="sidebar-nav-icon">📊</span> Analytics
       </a>
-      <a class="sidebar-nav-item" href="dashboard.html">
+      <a class="sidebar-nav-item" href="404.html">
         <span class="sidebar-nav-icon">🔔</span> Notifications
         <span style="margin-left:auto;background:var(--gold);color:var(--navy);font-size:.62rem;font-weight:700;padding:2px 7px;border-radius:50px">3</span>
       </a>
-      <a class="sidebar-nav-item" href="dashboard.html">
+      <a class="sidebar-nav-item" href="404.html">
         <span class="sidebar-nav-icon">⚙️</span> Settings
       </a>
 
@@ -91,8 +91,42 @@
           <span class="topbar-email-text" id="topbar-email-text">USER@EMAIL.COM</span>
         </div>
         <a class="topbar-btn" href="dashboard.html" title="Language">🌐</a>
-        <div class="topbar-btn topbar-notif" title="Notifications" style="position:relative">
-          🔔<span class="topbar-notif-dot"></span>
+        <div style="position:relative">
+          <div class="topbar-btn topbar-notif" title="Notifications" id="notif-btn">
+            🔔<span class="topbar-notif-dot" id="notif-dot"></span>
+          </div>
+          <!-- Notification Dropdown -->
+          <div id="notif-panel" style="display:none;position:absolute;top:46px;right:-8px;width:308px;background:#0d1424;border:1px solid rgba(91,191,181,.25);border-radius:14px;box-shadow:0 18px 54px rgba(0,0,0,.65);z-index:9999;overflow:hidden">
+            <div style="padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:.86rem;font-weight:700;color:#fff">🔔 Notifications</span>
+              <span id="mark-all-btn" style="font-size:.72rem;color:#5BBFB5;cursor:pointer;font-weight:600">Mark all read</span>
+            </div>
+            <div style="max-height:294px;overflow-y:auto;padding:4px 0">
+              <div style="display:flex;gap:11px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);align-items:flex-start">
+                <div style="width:9px;height:9px;border-radius:50%;background:#2ecc71;flex-shrink:0;margin-top:5px"></div>
+                <div><div style="font-size:.8rem;color:rgba(255,255,255,.85);line-height:1.5">Salary of ₹65,000 credited to your savings account</div><div style="font-size:.69rem;color:#64748B;margin-top:3px">Today, 9:00 AM</div></div>
+              </div>
+              <div style="display:flex;gap:11px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);align-items:flex-start">
+                <div style="width:9px;height:9px;border-radius:50%;background:#0B6BCE;flex-shrink:0;margin-top:5px"></div>
+                <div><div style="font-size:.8rem;color:rgba(255,255,255,.85);line-height:1.5">Credit card bill due Jun 15 — ₹42,300 outstanding</div><div style="font-size:.69rem;color:#64748B;margin-top:3px">Yesterday</div></div>
+              </div>
+              <div style="display:flex;gap:11px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);align-items:flex-start">
+                <div style="width:9px;height:9px;border-radius:50%;background:#00a8e8;flex-shrink:0;margin-top:5px"></div>
+                <div><div style="font-size:.8rem;color:rgba(255,255,255,.85);line-height:1.5">FD of ₹1,80,000 matures on Aug 12, 2026</div><div style="font-size:.69rem;color:#64748B;margin-top:3px">May 30</div></div>
+              </div>
+              <div style="display:flex;gap:11px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.05);align-items:flex-start">
+                <div style="width:9px;height:9px;border-radius:50%;background:#2ecc71;flex-shrink:0;margin-top:5px"></div>
+                <div><div style="font-size:.8rem;color:rgba(255,255,255,.85);line-height:1.5">Reward points updated — 12,840 pts available to redeem</div><div style="font-size:.69rem;color:#64748B;margin-top:3px">May 28</div></div>
+              </div>
+              <div style="display:flex;gap:11px;padding:12px 16px;align-items:flex-start">
+                <div style="width:9px;height:9px;border-radius:50%;background:#0B6BCE;flex-shrink:0;margin-top:5px"></div>
+                <div><div style="font-size:.8rem;color:rgba(255,255,255,.85);line-height:1.5">Home Loan EMI ₹14,500 auto-debited successfully</div><div style="font-size:.69rem;color:#64748B;margin-top:3px">May 10</div></div>
+              </div>
+            </div>
+            <div style="padding:11px 16px;border-top:1px solid rgba(255,255,255,.07);text-align:center;cursor:pointer" onclick="document.getElementById('notif-panel').style.display='none'">
+              <span style="font-size:.78rem;color:#5BBFB5;font-weight:600">View all notifications →</span>
+            </div>
+          </div>
         </div>
         <div class="topbar-avatar" id="topbar-avatar" title="Profile">AA</div>
       </div>
@@ -328,7 +362,7 @@
     </div>
 
     <div style="text-align:center;padding:16px;color:#94A3B8);font-size:.75rem">
-      © 2026 TrustStackly Bank Ltd. | Secured Session | Last Updated: June 1, 2026
+      © 2026 Stackly Bank Ltd. | Secured Session | Last Updated: June 1, 2026
     </div>
   </main>
 </div>
@@ -336,69 +370,56 @@
 <script src="js/main.js"></script>
 <script>
 (function(){
-  /* ── Read stored user data ─────────────────────────────── */
+  /* ── Auth guard: redirect to login if not logged in ────── */
   const storedEmail = (localStorage.getItem('tsb-user-email') || '').trim();
   const storedName  = (localStorage.getItem('tsb-user-name')  || '').trim();
+  if (!storedEmail) {
+    window.location.replace('login.html');
+    return;
+  }
 
-  /* ── Derive a display name ─────────────────────────────── */
+  /* ── Derive display name ───────────────────────────────── */
   function toTitleCase(str) {
     return str.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
   }
-
-  let displayName = '';
-  let firstName   = '';
-
+  let displayName = '', firstName = '';
   if (storedName) {
-    /* Name was saved during signup → use it directly */
     displayName = toTitleCase(storedName);
     firstName   = displayName.split(' ')[0];
-  } else if (storedEmail) {
-    /* Fallback: derive from the email prefix */
+  } else {
     const prefix = storedEmail.split('@')[0].replace(/[._\-]/g, ' ');
     displayName  = toTitleCase(prefix).toUpperCase();
     firstName    = toTitleCase(prefix.split(/\s+/)[0]);
   }
 
-  /* ── Greeting h2 ───────────────────────────────────────── */
+  /* ── Greeting ──────────────────────────────────────────── */
   const greetingEl = document.getElementById('dashboard-greeting-h2');
   if (greetingEl) {
     const hour = new Date().getHours();
     const tod  = hour < 12 ? 'Morning' : hour < 17 ? 'Afternoon' : 'Evening';
-    greetingEl.textContent = firstName
-      ? `Good ${tod}, ${firstName}! 👋`
-      : `Good ${tod}! 👋`;
+    greetingEl.textContent = firstName ? `Good ${tod}, ${firstName}! 👋` : `Good ${tod}! 👋`;
   }
 
-  /* ── Credit card holder name ───────────────────────────── */
+  /* ── Card holder name ──────────────────────────────────── */
   const cardHolderEl = document.getElementById('card-holder-name');
-  if (cardHolderEl && displayName) {
-    cardHolderEl.textContent = displayName;
-  }
+  if (cardHolderEl && displayName) cardHolderEl.textContent = displayName;
 
   /* ── Email pill ────────────────────────────────────────── */
   const emailEl = document.getElementById('topbar-email-text');
   const pillEl  = document.getElementById('topbar-email-pill');
-  if (storedEmail) {
-    if (emailEl) emailEl.textContent = storedEmail;
-    if (pillEl)  pillEl.title = 'Logged in as: ' + storedEmail;
-  }
+  if (emailEl) emailEl.textContent = storedEmail;
+  if (pillEl)  pillEl.title = 'Logged in as: ' + storedEmail;
 
   /* ── Avatar initials ───────────────────────────────────── */
   const avatarEl = document.getElementById('topbar-avatar');
   if (avatarEl) {
-    if (displayName) {
-      const parts    = displayName.split(/\s+/).filter(Boolean);
-      const initials = ((parts[0]||'T')[0] + (parts[1]||'S')[0]).toUpperCase();
-      avatarEl.textContent = initials;
-    } else if (storedEmail) {
-      const parts    = storedEmail.replace(/[@._]/g,' ').split(/\s+/).filter(Boolean);
-      const initials = ((parts[0]||'T')[0] + (parts[1]||'S')[0]).toUpperCase();
-      avatarEl.textContent = initials;
-    }
+    const src  = displayName || storedEmail.replace(/[@._]/g,' ');
+    const parts = src.split(/\s+/).filter(Boolean);
+    avatarEl.textContent = ((parts[0]||'S')[0] + (parts[1]||'B')[0]).toUpperCase();
   }
 
-  /* ── Logout: clear all user data ──────────────────────── */
-  document.querySelectorAll('a[href="index.html"]').forEach(a => {
+  /* ── Logout: clear session ─────────────────────────────── */
+  document.querySelectorAll('a').forEach(a => {
     if (a.textContent.trim().includes('Logout')) {
       a.addEventListener('click', () => {
         localStorage.removeItem('tsb-user-email');
@@ -406,6 +427,33 @@
       });
     }
   });
+
+  /* ── Notification panel ────────────────────────────────── */
+  const notifBtn   = document.getElementById('notif-btn');
+  const notifPanel = document.getElementById('notif-panel');
+  const markAllBtn = document.getElementById('mark-all-btn');
+  const notifDot   = document.getElementById('notif-dot');
+
+  if (notifBtn && notifPanel) {
+    notifBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      notifPanel.style.display = notifPanel.style.display === 'none' ? 'block' : 'none';
+    });
+    notifPanel.addEventListener('click', function(e) { e.stopPropagation(); });
+    document.addEventListener('click', function() { notifPanel.style.display = 'none'; });
+  }
+
+  if (markAllBtn) {
+    markAllBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (notifDot) notifDot.style.display = 'none';
+      document.querySelectorAll('.sidebar-nav-item span').forEach(s => {
+        if (s.textContent.trim() === '3') s.style.display = 'none';
+      });
+      showToast('All notifications marked as read', 'success');
+      if (notifPanel) notifPanel.style.display = 'none';
+    });
+  }
 })();
 </script>
 </body>

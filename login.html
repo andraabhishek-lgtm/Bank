@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Login to TrustStackly Bank — Secure Internet Banking">
-<title>Login — TrustStackly Bank</title>
+<meta name="description" content="Login to Stackly Bank — Secure Internet Banking">
+<title>Login — Stackly Bank</title>
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
   <div class="container">
     <div class="navbar-inner">
       <a href="index.html" class="nav-logo">
-        <img class="nav-logo-icon" src="images/logo.webp" alt="TrustStackly">
+        <img class="nav-logo-icon" src="images/logo.webp" alt="Stackly">
         <div class="nav-logo-text">
-          <span class="nav-logo-name">TrustStackly</span>
+          <span class="nav-logo-name">Stackly</span>
           <span class="nav-logo-tagline">Secure Banking</span>
         </div>
       </a>
@@ -37,7 +37,7 @@
       <!-- Left Info -->
       <div class="auth-info">
         <span class="section-tag">Secure Login</span>
-        <h1 class="auth-info-title">Welcome Back to <span class="text-gold">TrustStackly</span></h1>
+        <h1 class="auth-info-title">Welcome Back to <span class="text-gold">Stackly</span></h1>
         <p class="auth-info-subtitle">Sign in to access your accounts, manage finances, transfer money and much more — all from one secure dashboard.</p>
         <div class="auth-features">
           <div class="auth-feature"><div class="auth-feature-icon">🔐</div>256-bit SSL encryption on all sessions</div>
@@ -52,8 +52,8 @@
       <div class="auth-card">
         <div class="auth-card-header">
           <div class="auth-card-logo">
-            <img class="auth-card-logo-icon" src="images/logo.webp" alt="TrustStackly">
-            <span class="auth-card-logo-name">TrustStackly Bank</span>
+            <img class="auth-card-logo-icon" src="images/logo.webp" alt="Stackly">
+            <span class="auth-card-logo-name">Stackly Bank</span>
           </div>
           <h2 class="auth-card-title">Sign In</h2>
           <p class="auth-card-subtitle">Enter your credentials to access your account</p>
@@ -115,7 +115,7 @@
         </div>
 
         <div style="margin-top:18px;padding:12px;background:rgba(46,204,113,.07);border:1px solid rgba(46,204,113,.18);border-radius:10px;font-size:.75rem;color:rgba(255,255,255,.55);text-align:center;line-height:1.5">
-          🔒 Your connection is secure. TrustStackly will never ask for your password via phone or email.
+          🔒 Your connection is secure. Stackly will never ask for your password via phone or email.
         </div>
       </div>
     </div>
@@ -126,6 +126,10 @@
 
 <script src="js/main.js"></script>
 <script>
+/* Already logged in → go straight to dashboard */
+if ((localStorage.getItem('tsb-user-email') || '').trim()) {
+  window.location.replace('dashboard.html');
+}
 function showOTPLogin() {
   const s = document.getElementById('otp-login-section');
   s.classList.toggle('d-none');
