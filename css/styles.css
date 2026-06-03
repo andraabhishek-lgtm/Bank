@@ -125,12 +125,16 @@ section{padding:88px 0;position:relative}
 .nav-logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
 .nav-logo-icon{
   width:42px;height:42px;
-  border-radius:10px;object-fit:cover;display:block;flex-shrink:0;
+  border-radius:8px;object-fit:contain;display:block;flex-shrink:0;
   filter:none
 }
-.nav-logo-text{display:flex;flex-direction:column}
-.nav-logo-name{font-size:1.1rem;font-weight:800;color:var(--white);line-height:1.1}
-.nav-logo-tagline{font-size:.6rem;color:var(--teal-light);letter-spacing:1px;text-transform:uppercase}
+.nav-logo-text{display:flex;flex-direction:column;justify-content:center}
+.nav-logo-name{display:none}
+.nav-logo-tagline{
+  font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:#00CCFF;
+  text-shadow:0 0 8px rgba(0,204,255,.7),0 0 16px rgba(0,204,255,.4)
+}
 .nav-links{display:flex;align-items:center;gap:2px}
 .nav-links a{
   padding:8px 12px;font-size:.84rem;font-weight:500;
@@ -605,7 +609,7 @@ input[type="range"]::-webkit-slider-thumb{
 .footer-logo-wrap{display:flex;align-items:center;gap:11px;margin-bottom:15px;text-decoration:none}
 .footer-logo-icon{
   width:40px;height:40px;
-  border-radius:9px;object-fit:cover;display:block;flex-shrink:0;
+  border-radius:8px;object-fit:contain;display:block;flex-shrink:0;
   filter:none
 }
 .footer-logo-name{font-size:1.06rem;font-weight:800;color:var(--white)}
@@ -3208,4 +3212,93 @@ html[data-theme="dark"] .navbar.scrolled .btn-outline:hover{
 .value-card button.btn-primary{
   background:linear-gradient(135deg,#0B82D8,#16A34A);
   color:#FFFFFF
+}
+
+/* ══ GLOBAL TEXT VISIBILITY FIX ════════════════════════════
+   [data-theme="dark"] .section-title sets colour:#FFF which
+   makes text invisible on the light-background sections from
+   the redesign CSS. Override here with higher specificity.
+   ══════════════════════════════════════════════════════════ */
+
+/* Light-background sections → dark text */
+.services-section .section-title,
+.cards-section .section-title,
+.loans-section .section-title,
+.stats-section .section-title,
+.why-section .section-title,
+.faq-section .section-title,
+.about-values-grid ~ * .section-title,
+html[data-theme="dark"] .services-section .section-title,
+html[data-theme="dark"] .cards-section .section-title,
+html[data-theme="dark"] .loans-section .section-title,
+html[data-theme="dark"] .stats-section .section-title,
+html[data-theme="dark"] .why-section .section-title,
+html[data-theme="dark"] .faq-section .section-title{
+  color:#0A2540 !important
+}
+.services-section .section-subtitle,
+.cards-section .section-subtitle,
+.loans-section .section-subtitle,
+.stats-section .section-subtitle,
+.why-section .section-subtitle,
+.faq-section .section-subtitle,
+html[data-theme="dark"] .services-section .section-subtitle,
+html[data-theme="dark"] .cards-section .section-subtitle,
+html[data-theme="dark"] .loans-section .section-subtitle,
+html[data-theme="dark"] .why-section .section-subtitle,
+html[data-theme="dark"] .faq-section .section-subtitle{
+  color:#475569 !important
+}
+
+/* Gradient span text for light sections */
+.services-section .section-title span,
+.cards-section .section-title span,
+.loans-section .section-title span,
+.why-section .section-title span,
+.faq-section .section-title span,
+html[data-theme="dark"] .cards-section .section-title span,
+html[data-theme="dark"] .services-section .section-title span,
+html[data-theme="dark"] .loans-section .section-title span,
+html[data-theme="dark"] .why-section .section-title span{
+  background:linear-gradient(135deg,#0B6BCE,#16A34A) !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  background-clip:text !important
+}
+
+/* Dark-background sections → keep white text */
+.security-section .section-title,
+.news-section .section-title,
+.testimonials-section .section-title,
+html[data-theme="dark"] .security-section .section-title,
+html[data-theme="dark"] .news-section .section-title{
+  color:#FFFFFF !important
+}
+.security-section .section-subtitle,
+.news-section .section-subtitle,
+html[data-theme="dark"] .security-section .section-subtitle,
+html[data-theme="dark"] .news-section .section-subtitle{
+  color:rgba(255,255,255,.6) !important
+}
+
+/* ── Security badge text visibility fix ───────────────────── */
+.security-badge-main{
+  background:rgba(255,255,255,.05) !important;
+  border:1px solid rgba(255,255,255,.1) !important;
+  box-shadow:0 14px 44px rgba(0,0,0,.45) !important
+}
+.security-badge-main h3{color:#FFFFFF !important}
+.security-badge-main p{color:rgba(255,255,255,.7) !important}
+.security-icon-main{color:#FFFFFF !important;opacity:.9}
+
+/* ── Navbar logo: hide name, always show highlighted tagline ── */
+.nav-logo-name,
+.navbar.scrolled .nav-logo-name{display:none !important}
+.nav-logo-tagline,
+.navbar.scrolled .nav-logo-tagline{
+  display:block !important;
+  font-size:.72rem !important;font-weight:700 !important;
+  letter-spacing:2px !important;text-transform:uppercase !important;
+  color:#00CCFF !important;
+  text-shadow:0 0 8px rgba(0,204,255,.75),0 0 18px rgba(0,204,255,.4) !important
 }
